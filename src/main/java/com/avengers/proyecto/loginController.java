@@ -12,12 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import modelo.mongodb.DAOEmpleado;
 import modelo.mongodb.Empleado;
 
-
-
-
-
-
-
 public class loginController {
 
 	@RequestMapping("login.htm")
