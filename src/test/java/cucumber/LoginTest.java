@@ -7,7 +7,7 @@ import modelo.mongodb.Empleado;
 
 public class LoginTest {
 
-	Empleado e1, e2;
+	Empleado e1;
 	DAOEmpleado dao;
 	
 	
