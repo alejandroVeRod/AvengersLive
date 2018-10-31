@@ -1,6 +1,6 @@
 sudo: false
 language: java
-script: mvn -Dcucumber.options="--plugin junit:target/cucumber-junit-report.xml" test -B
+script: mvn test -B
 
 deploy:
   provider: heroku
