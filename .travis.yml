@@ -1,10 +1,6 @@
 sudo: false
 language: java
-script: mvn test -B
-
-script : " bundle   exec   rake   knapsack:cucumber" 
-env : global : - CI_NODE_TOTAL=2 matrix : - CI_NODE_INDEX=0 - CI_NODE_INDEX=1 
-
+script: mvn -Dcucumber.options="--plugin junit:target/cucumber-junit-report.xml" test -B
 
 deploy:
   provider: heroku
