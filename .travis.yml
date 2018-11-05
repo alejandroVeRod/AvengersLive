@@ -9,14 +9,14 @@ cache:
 jobs:
   include:
   - stage: test
-    jdk: oraclejdk10
+    jdk: oraclejdk8
     script: mvn verify -Pcheck-semantic-version -DskipTests=true
     env: CHECK_SEMANTIC_VERSION=true
-  - jdk: oraclejdk10
+  - jdk: oraclejdk8
     script: mvn -q verify
     after_success:
     - mvn clean cobertura:cobertura coveralls:report -P coveralls.io
-  - jdk: oraclejdk10
+  - jdk: oraclejdk8
     env: JAVADOC=true
     script:
     - mvn clean verify -DskipTests=true
