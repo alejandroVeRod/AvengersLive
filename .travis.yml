@@ -1,6 +1,28 @@
 sudo: false
 language: java
 script: mvn test -B
+
+cache:
+  directories:
+  - "$HOME/.m2"
+
+jobs:
+  include:
+  - stage: test
+    jdk: oraclejdk10
+    script: mvn verify -Pcheck-semantic-version -DskipTests=true
+    env: CHECK_SEMANTIC_VERSION=true
+  - jdk: oraclejdk10
+    script: mvn -q verify
+    after_success:
+    - mvn clean cobertura:cobertura coveralls:report -P coveralls.io
+  - jdk: oraclejdk10
+    env: JAVADOC=true
+    script:
+    - mvn clean verify -DskipTests=true
+    - mvn javadoc:aggregate
+
+
 deploy:
   provider: heroku
   api_key:
