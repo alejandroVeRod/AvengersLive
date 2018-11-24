@@ -245,5 +245,19 @@ public class loginController {
 		return new ModelAndView("resolucionIncidencias");
 	}
 	
+	@RequestMapping(method = RequestMethod.POST, value = "direccionAltaEmpleado.htm")
+	public ModelAndView direccionAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
+		return new ModelAndView("darAltaEmpleado");
+	}
+	
+	@RequestMapping(method = RequestMethod.POST, value = "darAltaEmpleado.htm")
+	public ModelAndView darAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
+		String id = request.getParameter("dni");
+		String email = request.getParameter("email");
+		String nombre = request.getParameter("nombre");
+		String rol = request.getParameter("rol");
+		Empleado altaEmpleado = new Empleado(id, email, nombre, rol);	
+		return new ModelAndView("darAltaEmpleado");
+	}
 	
 }

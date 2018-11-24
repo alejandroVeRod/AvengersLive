@@ -1,5 +1,6 @@
 package modelo.mongodb;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
@@ -71,7 +72,7 @@ public class DAOEmpleado {
 		db.insertarDocumento(coleccion, documento
 				.append("_id", empleado.getDni())
 				.append("email", empleado.getEmail())
-				.append("contrasna", empleado.getContrasena())
+				.append("contrasena", DigestUtils.md5Hex(empleado.getContrasena()))
 				.append("nombre", empleado.getNombre())
 				.append("rol", empleado.getRol()));		
 	}
