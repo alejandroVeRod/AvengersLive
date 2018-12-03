@@ -91,15 +91,16 @@ table {
 		<input name="nombre" id="nombre" value="" style="display: none">
 		<input name="rol" id="rol" value="" style="display: none">
 		
-		<p>
-			<input class="btn boton-personalizado" type="submit" onClick="eliminarEmpleado()"
-				id="eliminarEmpleado" value="Dar de baja"></input>
-		</p>
 		
 		<p>
-			<input class="btn boton-personalizado" type="submit" onClick="modificar()"
-			name="modificar" value="Modificar Empleado">
+			<input type="submit" value="Dar de baja" id="consulta"
+				onClick="eliminarEmpleado()" class="btn boton-personalizado"></input>
 		</p>
+		<p>
+			<input type="submit" value="Modificar Empleado" id="consulta"
+				onClick="modificar()" class="btn boton-personalizado"></input>
+		</p>
+		
 	</form>
 	
 		
@@ -155,6 +156,7 @@ table {
 		if (seleccionado == null) {
 			alert("Seleccione una fila haciendo click sobre ella");
 		}
+		
 		var f = seleccionado.getElementsByTagName('td');
 		var dni= f[0].textContent;
 		var email= f[1].textContent;

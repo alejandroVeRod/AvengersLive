@@ -85,7 +85,7 @@ public class loginController {
 			mensaje="Fichaje Cerrado";
 			if(est)mensaje="Fichaje Abierto";
 			model.addAttribute("mensaje",mensaje);
-			if (empleado.getRol().equals("usuario"))
+			if (empleado.getRol().equals("Usuario"))
 				return new ModelAndView("home");
 			else if(empleado.getRol().equals("gestor"))return new ModelAndView("gestor");//unica línea añadida
 			else return new ModelAndView("admin");
@@ -248,7 +248,26 @@ public class loginController {
 		model.addAttribute("comentario", comentario);
 		return new ModelAndView("Incidencias");
 	}
+	@RequestMapping(method = RequestMethod.POST, value = "IncidenciasUsers.htm")
+	public ModelAndView consulIncidenciasUsers(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
+		String id = request.getParameter("idEmpleado");
+		String tip = request.getParameter("tipo");
+		String email=request.getParameter("emailEmpleado");
+		String men = request.getParameter("mensaje");
+		String fechaIn = request.getParameter("fechaInicio");
+		String fechaFin = request.getParameter("fechaFin");
+		String comentario = request.getParameter("comentario");
+		inc=new Incidencia(id,tip,email,men,fechaIn,fechaFin,comentario);
 
+		model.addAttribute("id", id);
+		model.addAttribute("tip", tip);
+		model.addAttribute("email", email);
+		model.addAttribute("men", men);
+		model.addAttribute("fechaIn", fechaIn);
+		model.addAttribute("fechaFin", fechaFin);
+		model.addAttribute("comentario", comentario);
+		return new ModelAndView("IncidenciasUsers");
+	}
 	@RequestMapping(method = RequestMethod.POST, value = "resolucionIncidencias.htm")
 	public ModelAndView resolverIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
 		String mensaje = "";
@@ -283,6 +302,8 @@ public class loginController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "filtro.htm")
 	public ModelAndView filtros(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
+		
+		
 		int i=0;
 		String [] arrayValores = new String[6];
 		String [] arrayTipos = new String[6];
@@ -375,35 +396,26 @@ public class loginController {
 		String horaEntrada=request.getParameter("horaEntrada");
 		String horaCierre=request.getParameter("horaCierre");
 		String estad=request.getParameter("estado");
+		
+		if(horaEntrada!="") {
 		model.addAttribute("horAh",horaEntrada.substring(0, 2));
 		model.addAttribute("horAm",horaEntrada.substring(3, 5));
 		model.addAttribute("horAs",horaEntrada.substring(6, 8));
+		}
+		if(horaCierre!="") {
 		model.addAttribute("horCh",horaCierre.substring(0, 2));
 		model.addAttribute("horCm",horaCierre.substring(3, 5));
 		model.addAttribute("horCs",horaCierre.substring(6, 8));
+		}
 		model.addAttribute("dia",fechaFich.substring(0,2));
 		model.addAttribute("mes",fechaFich.substring(3,5));
 		model.addAttribute("ano",fechaFich.substring(6,10));
 		model.addAttribute("estado",estad);
 		if(email==null) {
+			System.out.println("hola");
 			fichaj=new Fichaje("", fechaFich, horaEntrada,horaCierre, estad);
 		}
-		if(email!=null) {
-
-			String dni = request.getParameter("idEmpleado");
-			String horAh = request.getParameter("horAh");
-			String horAm = request.getParameter("horAm");
-			String horAs= request.getParameter("horAs");
-			String horCh = request.getParameter("horCh");
-			String horCm = request.getParameter("horCm");
-			String horCs= request.getParameter("horCs");
-			String dia= request.getParameter("dia");
-			String mes= request.getParameter("mes");
-			String ano= request.getParameter("ano");
-			String estado= request.getParameter("estado");
-			fichaj.setIdEmpleado(dni);
-			fichaj.editarFichaje(dni, horAh, horAm, horAs, horCh, horCm, horCs, dia, mes, ano, estado);
-		}
+		
 		return new ModelAndView("formFich");
 	}
 	
@@ -471,9 +483,12 @@ public class loginController {
 		}
 	@RequestMapping(method = RequestMethod.POST, value = "CrearIncYCerrarFich.htm")
 	public ModelAndView CrearIncYCerrarFich(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
-		boolean est=fichaje.fichajesAbiertos(empleado.getDni());
+	
+		
+			boolean est=fichaje.fichajesAbiertos(empleado.getDni());
 		model.addAttribute("est",est);
 		
+	
 		DateFormat hora1 = new SimpleDateFormat("HH:mm:ss");
 		model.addAttribute("email", empleado.getEmail());		
 		
@@ -490,16 +505,35 @@ public class loginController {
 		fichaje = new Fichaje(empleado.getDni(), fecha.format(new Date()), hora.format(new Date()));
 		model.addAttribute("estado", fichaje.getEstado());
 		mensaje = "Fichaje Abierto";
-		
-		
-		return new ModelAndView("gestor","mensaje", mensaje);
+	    model.addAttribute("mensaje",mensaje);
+		if (empleado.getRol().equals("Usuario"))
+			return new ModelAndView("home");
+		else if(empleado.getRol().equals("gestor"))return new ModelAndView("gestor");//unica línea añadida
+		else return new ModelAndView("admin");
 	}
 
 	
-	@RequestMapping(method = RequestMethod.POST, value = "modificarEmpleado.htm")
+	@RequestMapping( value = "modificarEmpleado.htm")
 	public ModelAndView modificarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
 		String email = request.getParameter("emailEmpleado");
+		String dni=request.getParameter("dni");
+		model.addAttribute("dni",dni);
 		model.addAttribute("emailEmpleado", email);
+		String mail="";
+		String nombre="";
+		String apellido="";
+		mail=request.getParameter("email");
+		 nombre=request.getParameter("nombree");
+		apellido=request.getParameter("apellido");
+		
+		if(mail!=null&&nombre!=null&&apellido!=null) {
+			
+			System.out.println(mail+nombre+apellido);
+		model.addAttribute("email","");
+		model.addAttribute("apellido","");
+		model.addAttribute("nombree","");
+		}
+		
 		return new ModelAndView("modificarEmpleado");
 	}
 	
@@ -507,7 +541,45 @@ public class loginController {
 	public ModelAndView promocionarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
 		String email = request.getParameter("emailEmpleado");
 		String rol = request.getParameter("rol");
-		empleado.cambiarRol(email, rol);		
+		empleado.cambiarRol(email, rol);
+		System.out.println(email);
+		System.out.println("hola");
 		return new ModelAndView("modificarEmpleado");
+	}
+	@RequestMapping( value = "AlmFich.htm")
+	public ModelAndView AlmFich(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {		
+		
+
+			String dni = request.getParameter("idEmpleado");
+			String horAh = request.getParameter("horAh");
+			String horAm = request.getParameter("horAm");
+			String horAs= request.getParameter("horAs");
+			String horCh = request.getParameter("horCh");
+			
+			String horCm = request.getParameter("horCm");
+			String horCs= request.getParameter("horCs");
+			
+			String dia= request.getParameter("dia");
+			String mes= request.getParameter("mes");
+			String ano= request.getParameter("ano");
+			String estado= request.getParameter("estado");
+			if(horAs=="")horAs="00";
+			if(horCs=="")horCs="00";
+			fichaj.setIdEmpleado(dni);
+			fichaj.editarFichaje(dni, horAh, horAm, horAs, horCh, horCm, horCs, dia, mes, ano, estado);
+			model.addAttribute("horAh",horAh);
+			model.addAttribute("horAm",horAm);
+			model.addAttribute("horAs",horAs);
+			model.addAttribute("horCh",horCh);
+			model.addAttribute("horCm",horCm);
+			model.addAttribute("horCs",horCs);
+			model.addAttribute("dia",dia);
+			model.addAttribute("mes",mes);
+			model.addAttribute("ano",ano);
+			model.addAttribute("estado",estado);
+			model.addAttribute("dni", dniEmpl);
+			model.addAttribute("emailEmpleado", mail);
+		    
+		return new ModelAndView("formFich");
 	}
 }

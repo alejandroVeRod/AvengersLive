@@ -48,6 +48,9 @@
 				<prop key="modificarEmpleado.htm">loginController</prop>
 				<prop key="promocionarEmpleado.htm">loginController</prop>
 				<prop key="CrearIncYCerrarFich.htm">loginController</prop>
+				
+				<prop key="AlmFich.htm">loginController</prop>
+<prop key="IncidenciasUsers.htm">loginController</prop>			
 			</props>
 		</property>
 	</bean>

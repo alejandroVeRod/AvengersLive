@@ -96,6 +96,7 @@ html, body {
 	<form name="abr" method="post">
 	<p>
 	<input name="est" id="est" value="${est}" style="display: none">
+	<input name="ej" id="ej" value="" style="display: none">
 	<input type="submit" value="Abrir Fichaje" id="consulta"
 				onClick="verEstado()" class="btn boton-personalizado"></input>
 	</p>
@@ -153,6 +154,7 @@ html, body {
 </body>
 <script type="text/javascript">
 function verEstado(){
+	document.getElementById("ej").value="ejecuta";
 	if(document.getElementById("est").value=="true"){
 		
 	
@@ -161,6 +163,7 @@ function verEstado(){
 		var mensaje;
 		var opcion = confirm("Tiene otro fichaje abierto, ¿desea continuar?");
 		if (opcion == true) {
+			
 			document.abr.action = "CrearIncYCerrarFich.htm";
 		} else {
 			

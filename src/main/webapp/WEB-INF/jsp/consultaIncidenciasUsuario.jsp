@@ -266,12 +266,12 @@ table {
 		document.getElementById("com").value = comentario;
 		document.getElementById("fechIn").value = fechaInicio;
 		document.getElementById("fechFin").value = fechaFin;
-		document.normal.action = "Incidencias.htm";
+		document.normal.action = "IncidenciasUsers.htm";
 
 	}
 	function retroceder() {
 
-		document.addTarea.action = "home.htm";
+		document.addTarea.action = "IrHome.htm";
 
 	}
 </script>

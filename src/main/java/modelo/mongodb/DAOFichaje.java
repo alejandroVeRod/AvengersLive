@@ -134,12 +134,15 @@ public class DAOFichaje {
 		Document documento = new Document();
 		Document filtro = new Document();
 		Document cambio = new Document();
+		
+		
 		filtro.put("idEmpleado", dni);
 		filtro.put("estado", fichaje.getEstado());
 		filtro.put("horaEntrada",fichaje.getHoraEntrada());
-		filtro.put("horaCierre",fichaje.getHoraCierre());
+		if(fichaje.getHoraCierre()!="")filtro.put("horaCierre",fichaje.getHoraCierre());else	filtro.put("horaCierre",null);
 		filtro.put("fechaFichaje",fichaje.getFechaFichaje());
 		cambio.put("horaEntrada",horaEntrada);
+		
 		cambio.put("horaCierre", horaCierre);
 		cambio.put("estado", estado);
 		cambio.put("fechaFichaje",fechaFich);
