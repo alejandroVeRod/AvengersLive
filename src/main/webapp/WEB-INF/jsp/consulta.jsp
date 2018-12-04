@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="iso-8859-1"%>
 
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 </head>
 <style>
 html, body {
-	/* Aqu√≠ el origen de la imagen */
+	/* AquÌ el origen de la imagen */
 	background-image:
 		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
 	/* Fijar la imagen de fondo este vertical y
@@ -30,7 +30,7 @@ html, body {
 	background-attachment: fixed;
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
-	/* Damos un color de fondo mientras la imagen est√° cargando  */
+	/* Damos un color de fondo mientras la imagen est· cargando  */
 	background-color: #464646;
 }
 

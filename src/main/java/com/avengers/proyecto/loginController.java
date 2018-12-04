@@ -504,18 +504,20 @@ public class loginController {
 		model.addAttribute("emailEmpleado", email);
 		model.addAttribute("nombre",nombre);
 		model.addAttribute("rol", rol);
-		String mail="";
-		String nombree="";
-		String apellido="";
-		mail=request.getParameter("email");
-		 nombree=request.getParameter("nombree");
-		apellido=request.getParameter("apellido");
+		
+		
+		
+		
+		
+		String mail=request.getParameter("email");
+		 String nombree=request.getParameter("nombree");
+		
 	
-		if(mail!=null&&nombree!=null&&apellido!=null) 
+		if(mail!=null&&nombre!=null) 
 		{
 		Empleado empl=new Empleado();
 		String [] tipos= {"email","nombre"};
-		String [] valores= {mail,nombree+apellido};
+		String [] valores= {mail,nombree};
 		empl.modificarEmpleado(tipos, valores, dni);
 		
 		}

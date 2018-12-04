@@ -67,21 +67,15 @@ html, body {
   </div>
 </div>
 <div class="form-group">
-  <label class="col-md-4 control-label" for="nombre">Nombre</label>  
+  <label class="col-md-4 control-label" for="nombre">Nombre y Apellidos</label>  
   <div class="col-md-5">
-  <input id="nombree" name="nombree" type="text" placeholder="Nombre" class="form-control input-md"  value ="" pattern="[A-Za-z ]{1,20}" title="Ej:Jose Luis" required >
+  <input id="nombre" name="nombre" value= "${nombre}" type="text" placeholder="Nombre" class="form-control input-md"  value ="" pattern="[A-Za-z ]{1,20}" title="Ej:Jose Luis" required >
     
   </div>
 </div>
 
 
-<div class="form-group">
-  <label class="col-md-4 control-label" for="apellido">Apellido</label>  
-  <div class="col-md-5">
-  <input id="apellido" name="apellido" type="text" placeholder="apellidos" class="form-control input-md" value ="" pattern="[A-Za-z]{1,15} [A-Za-z]{1,15}" title="Ej: Rodriguez Esi" required >
-    
-  </div>
-</div>
+
 
 
 <div class="form-group">
@@ -96,7 +90,7 @@ html, body {
 <div class="form-group">
   <label class="col-md-4 control-label" for="enviar"></label>
   <div class="col-md-4">
-     <button type="submit" class="btn boton-personalizado">Editar</button>
+     <button type="submit" onClick="modificar()" class="btn boton-personalizado">Editar</button>
   </div>
 </div>
 
@@ -112,10 +106,10 @@ html, body {
 
 	<br>
 	<br>
-	<input name="emailEmpleado" id="email" value="${emailEmpleado}" style="display: none"> 
-    <input name="dni" id="email" value="${dni}" style="display: none"> 
-	<input name="nombre" id="email" value="${nombre}" style="display: none"> 
-    <input name="rol" id="email" value="${rol}" style="display: none"> 
+	<input name="emailEmpleado" id="emaill" value="${emailEmpleado}" style="display: none"> 
+    <input name="dni" id="emaill" value="${dni}" style="display: none"> 
+	<input name="nombree" id="nombree" value="${nombre}" style="display: none"> 
+    <input name="rol" id="emaill" value="${rol}" style="display: none"> 
 	</form>
 	<div  align="center">
 
@@ -153,5 +147,13 @@ html, body {
 	</div>
 	
 </body>
-
+<script>
+function modificar(){
+	if(document.getElementById("email").value!=""&&document.getElementById("nombre").value!=""){
+	alert("Empleado editado");
+	}
+	document.form.action = "modificarEmpleado.htm";
+}
+</script>
 </html>
+
