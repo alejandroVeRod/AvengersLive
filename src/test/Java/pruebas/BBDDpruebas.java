@@ -43,22 +43,15 @@ public class BBDDpruebas {
 	public void testInsertarEmpleado() {
 			
 		MongoCollection<Document> testEmpleado=getCollection("Empleados");
-		Document doc = new Document();
-		doc.append("_id", "01");
-		doc.append("email", "c");
-		doc.append("contrasena", "c");
-		doc.append("nombre", "c c c");
-		doc.append("rol", "c");
-		DBBroker db=new DBBroker();
-		db.insertarDocumento(testEmpleado, doc);
-		FindIterable<Document> ite= testEmpleado.find(doc);
-		assertTrue(ite.iterator().hasNext());		
+
+		
 	}
 	
 	public void testAbrirFichaje() {
 		
 		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
 
+		
 	}
 
 	public void testEliminarEmpleado() {
