@@ -43,6 +43,16 @@ public class BBDDpruebas {
 	public void testInsertarEmpleado() {
 			
 		MongoCollection<Document> testEmpleado=getCollection("Empleados");
+<<<<<<< HEAD
+=======
+	
+		
+	}
+	
+	public void testAbrirFichaje() {
+		
+		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
+>>>>>>> branch 'E01Test' of https://github.com/alejandroVeRod/AvengersLive.git
 	
 		
 	}
