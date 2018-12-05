@@ -40,12 +40,17 @@ public class BBDDpruebas {
 	
 	public void testInsertarEmpleado() {
 			
-		MongoCollection<Document> testEmpleado=getCollection("Empleado");
+		MongoCollection<Document> testEmpleado=getCollection("Empleados");
 	
 		
 	}
 	
+	public void testAbrirFichaje() {
+		
+		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
 	
+		
+	}
 
 }
 
