@@ -47,12 +47,7 @@ public class BBDDpruebas {
 		
 	}
 	
-	public void testAbrirFichaje() {
-		
-		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
 
-		
-	}
 
 	public void testEliminarEmpleado() {
 		
@@ -68,6 +63,13 @@ public class BBDDpruebas {
 		
 		DBBroker db= new DBBroker();
 		
+		
+	}
+	
+	public void testAbrirFichaje() {
+		
+		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
+
 		
 	}
 }
