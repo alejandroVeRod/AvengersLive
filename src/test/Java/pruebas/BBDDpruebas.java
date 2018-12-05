@@ -11,6 +11,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
+import modelo.mongodb.DBBroker;
+
 
 public class BBDDpruebas {
 
@@ -40,10 +42,26 @@ public class BBDDpruebas {
 	
 	public void testInsertarEmpleado() {
 			
-		MongoCollection<Document> testEmpleado=getCollection("Empleado");
+		MongoCollection<Document> testEmpleado=getCollection("Empleados");
 	
 		
 	}
 
+	public void testEliminarEmpleado() {
+		
+		MongoCollection<Document> testEmpleado = getCollection("Empleados");
+		
+		Document doc = new Document();
+		
+		testEmpleado.insertOne(doc);
+		doc.append("email", "pruebaenrique@hotmail.com");
+		doc.append("contrasena", "Enrique1234");
+		doc.append("nombre", "Enrique");
+		doc.append("rol", "administrador");
+		
+		DBBroker db= new DBBroker();
+		
+		
+	}
 }
 
