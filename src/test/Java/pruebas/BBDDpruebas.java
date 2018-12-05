@@ -54,6 +54,28 @@ public class BBDDpruebas {
 		FindIterable<Document> ite= testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());		
 	}
+	
+	public void testAbrirFichaje() {
+		
+		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
 
+	}
+
+	public void testEliminarEmpleado() {
+		
+		MongoCollection<Document> testEmpleado = getCollection("Empleados");
+		
+		Document doc = new Document();
+		
+		testEmpleado.insertOne(doc);
+		doc.append("email", "pruebaenrique@hotmail.com");
+		doc.append("contrasena", "Enrique1234");
+		doc.append("nombre", "Enrique");
+		doc.append("rol", "administrador");
+		
+		DBBroker db= new DBBroker();
+		
+		
+	}
 }
 
