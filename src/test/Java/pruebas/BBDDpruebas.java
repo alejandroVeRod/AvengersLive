@@ -52,8 +52,25 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
+	
+	@Test
+	public void testAbrirFichaje() {
 
-	public void testEliminarEmpleado() {
+		MongoCollection<Document> testFichaje = getCollection("Fichajes");
+		Document doc = new Document();
+		doc.append("_id", "02");
+		doc.append("idEmpleado", "02");
+		doc.append("fechaFichaje", "07/11/2018");
+		doc.append("horaEntrada", "23:55:03");
+		doc.append("HoraCierre", "23:55:29");
+		doc.append("estado", "Cerrado");
+		DBBroker db = new DBBroker();
+		db.insertarDocumento(testFichaje, doc);
+		FindIterable<Document> ite = testFichaje.find(doc);
+		assertTrue(ite.iterator().hasNext());
+	}
+
+/*	public void testEliminarEmpleado() {
 
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 
@@ -67,11 +84,9 @@ public class BBDDpruebas {
 
 		DBBroker db = new DBBroker();
 
-	}
+	}*/
 
-	public void testAbrirFichaje() {
+		
 
-		MongoCollection<Document> testEmpleado = getCollection("Fichajes");
-
-	}
+		
 }
