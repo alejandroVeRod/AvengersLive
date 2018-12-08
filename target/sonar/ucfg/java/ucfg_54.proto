@@ -1,0 +1,102 @@
+
+hmodelo.mongodb.DAOEmpleado#filtrar(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+__unknown_file (tipovalortotalIncidencias"6*–
+1[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaä	 ä("n
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaä ä(
+
+incidencias*ó
+3[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaá á(Ø
+¨
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaá á(
+%9"'java.util.List#add(Ljava/lang/Object;)Z*
+
+incidencias*
+
+	documento*
+5*ß
+4[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÖ Ö(≠
+™
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÖ Ö(&
+%5"'java.util.List#get(I)Ljava/lang/Object;*
+
+totalIncidencias*
+""z
+x
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÖ Ö(&
+	documento"__id*
+
+%5º
+π
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÜ Ü(
+%6";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipoù
+ö
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÜ Ü($
+%7"-java.lang.Object#toString()Ljava/lang/String;*
+
+%6±
+Æ
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÜ Ü(<
+%8"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+%7*	
+
+valor*
+3
+5*ˇ
+5[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÑ Ñ(î
+ë
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÑ Ñ(,
+%4"java.util.List#size()I*
+
+totalIncidencias*
+4
+1*Û
+6[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÇ Ç(8zx
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÇ# Ç(6
+%0"java.util.ArrayListç
+ä
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÇ Ç(8
+%1"java.util.ArrayList#<init>()V*
+
+%0|
+z
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÇ Ç(9
+incidencias"__id*
+
+%0xv
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÉ É(#
+%2"org.bson.Documentã
+à
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÉ É(%
+%3"org.bson.Document#<init>()V*
+
+%2z
+x
+[
+OC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOEmpleado.javaÉ É(&
+	documento"__id*
+
+%2*
+5

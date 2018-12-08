@@ -1,0 +1,300 @@
+
+mmodelo.mongodb.DAOIncidencia#filtrarFecha(Ljava/lang/String;Ljava/util/Date;Ljava/util/List;)Ljava/util/List;
+__unknown_file (tipovalortotalIncidencias"34*í
+12[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ? Z(D•
+¢
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(E
+%25"(java.util.Date#before(Ljava/util/Date;)Z*
+
+%24*	
+
+valor*
+5
+10*Æ
+
+34[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaK K(8zx
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaK# K(6
+%0"java.util.ArrayListç
+ä
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaK K(8
+%1"java.util.ArrayList#<init>()V*
+
+%0|
+z
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaK K(9
+incidencias"__id*
+
+%0xv
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaL L(#
+%2"org.bson.Documentã
+à
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaL L(%
+%3"org.bson.Document#<init>()V*
+
+%2z
+x
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaL L(&
+	documento"__id*
+
+%2Å
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaM# M(3
+%4"java.text.SimpleDateFormat∂
+≥
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaM M(A
+%5"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*
+
+%4*
+
+dd/MM/yyyyz
+x
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaM M(B
+	castFecha"__id*
+
+%4*
+33*©
+23[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(6ø
+º
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(6
+%15">java.text.DateFormat#parse(Ljava/lang/String;)Ljava/util/Date;*
+
+	castFecha*
+
+%14*
+22*©
+13[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(7ø
+º
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(7
+%24">java.text.DateFormat#parse(Ljava/lang/String;)Ljava/util/Date;*
+
+	castFecha*
+
+%23*
+12*â
+24[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(5ü
+ú
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(5
+%14"-java.lang.Object#toString()Ljava/lang/String;*
+
+%13*
+23*â
+14[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(6ü
+ú
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(6
+%23"-java.lang.Object#toString()Ljava/lang/String;*
+
+%22*
+13*ß
+25[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(Ω
+∫
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(*
+%13";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipo*
+24*ß
+15[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(Ω
+∫
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaZ Z(+
+%22";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipo*
+14*í
+27[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR> R(C§
+°
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(D
+%12"'java.util.Date#after(Ljava/util/Date;)Z*
+
+%11*	
+
+valor*
+25
+20*•
+17[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaX X(∑
+¥
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaX X(-
+%21"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+tipo*
+
+fechaFin*
+15
+33*©
+28[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(7ø
+º
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(7
+%11">java.text.DateFormat#parse(Ljava/lang/String;)Ljava/util/Date;*
+
+	castFecha*
+
+%10*
+27*à
+29[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(6û
+õ
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(6
+%10"-java.lang.Object#toString()Ljava/lang/String;*
+
+%9*
+28*–
+1[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javac	 c("n
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javac c(
+
+incidencias*ô
+5[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java\ \(∞
+≠
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java\ \( 
+%30"'java.util.List#add(Ljava/lang/Object;)Z*
+
+incidencias*
+
+	documento*
+33*ì
+7[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[> [(Cß
+§
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(D
+%29"*java.util.Date#equals(Ljava/lang/Object;)Z*
+
+%28*	
+
+valor*
+5
+33*ß
+8[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(6ø
+º
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(6
+%28">java.text.DateFormat#parse(Ljava/lang/String;)Ljava/util/Date;*
+
+	castFecha*
+
+%27*
+7*á
+9[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(5ü
+ú
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(5
+%27"-java.lang.Object#toString()Ljava/lang/String;*
+
+%26*
+8*¶
+30[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(º
+π
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaR R(+
+%9";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipo*
+29*ö
+20[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaT T(∞
+≠
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaT T( 
+%17"'java.util.List#add(Ljava/lang/Object;)Z*
+
+incidencias*
+
+	documento*
+33*¶
+10[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(Ω
+∫
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.java[ [(*
+%26";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipo*
+9*”
+32[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaO O(≠
+™
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaO O(&
+%7"'java.util.List#get(I)Ljava/lang/Object;*
+
+totalIncidencias*
+""z
+x
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaO O(&
+	documento"__id*
+
+%7π
+∂
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaP P(*
+%8"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+tipo*
+fechaInicio*
+17
+30*ï
+22[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS> S(Cß
+§
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaS S(D
+%16"*java.util.Date#equals(Ljava/lang/Object;)Z*
+
+%15*	
+
+valor*
+20
+33*Å
+33[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaN N(î
+ë
+[
+QC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DAOIncidencia.javaN N(,
+%6"java.util.List#size()I*
+
+totalIncidencias*
+32
+1

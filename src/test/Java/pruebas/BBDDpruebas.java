@@ -38,39 +38,32 @@ public class BBDDpruebas {
 		
 	}
 	
+
 	@Test
-	
-	public void testInsertarEmpleado() {
-			
-		MongoCollection<Document> testEmpleado=getCollection("Empleados");
-
-		
-	}
-	
-
 
 	public void testEliminarEmpleado() {
 		
-		MongoCollection<Document> testEmpleado = getCollection("Empleados");
+		MongoCollection<Document> testEmpleado=getCollection("Empleados"); 
+		 
+		Document doc = new Document(); 
+
+		doc.append("_id", "38292749"); 
+		doc.append("email", "minchata9882@gmieal.com"); 
+		doc.append("contrasena", "1234"); 
+		doc.append("nombre", "Enrique"); 	 
+		doc.append("rol", "administrador"); 
+ 
+		DBBroker db=new DBBroker(); 
+ 
+		db.insertarDocumento(testEmpleado, doc); 
 		
-		Document doc = new Document();
+		FindIterable<Document> ite= testEmpleado.find(doc); 
+ 
+		db.borrarDocumento(testEmpleado, doc);
 		
-		testEmpleado.insertOne(doc);
-		doc.append("email", "pruebaenrique@hotmail.com");
-		doc.append("contrasena", "Enrique1234");
-		doc.append("nombre", "Enrique");
-		doc.append("rol", "administrador");
-		
-		DBBroker db= new DBBroker();
-		
-		
+		assertFalse(ite.iterator().hasNext());		 
+
 	}
 	
-	public void testAbrirFichaje() {
-		
-		MongoCollection<Document> testEmpleado=getCollection("Fichajes");
-
-		
-	}
 }
 
