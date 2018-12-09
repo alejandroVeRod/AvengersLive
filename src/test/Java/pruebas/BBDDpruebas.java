@@ -74,11 +74,11 @@ public class BBDDpruebas {
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 		
 		Document doc = new Document();
-		doc.append("_id", "02");
-		doc.append("idEmpleado", "02");
+		doc.append("_id", "04");
+		doc.append("idEmpleado", "04");
 		doc.append("fechaFichaje", "07/12/2018");
 		doc.append("horaEntrada", "00:00:00");
-		doc.append("horaCierre", "null");
+		doc.append("horaCierre", null);
 		doc.append("Estado", "abierto");
 		DBBroker db = new DBBroker();
 		db.insertarDocumento(testFichaje, doc);
@@ -88,41 +88,21 @@ public class BBDDpruebas {
 
 	}*/
 	
-	/*public void testInsertarFichaje() {
-
-		MongoCollection<Document> testFichaje = getCollection("Fichajes");
-		
-		Document doc = new Document();
-		doc.append("_id", "03");
-		doc.append("idEmpleado", "03");
-		doc.append("fechaFichaje", "07/12/2018");
-		doc.append("horaEntrada", "01:00:00");
-		doc.append("horaCierre", "01:00:30");
-		doc.append("Estado", "Cerrado");
-		DBBroker db = new DBBroker();
-		db.insertarDocumento(testFichaje, doc);
-		FindIterable<Document> ite = testFichaje.find(doc);
-		assertTrue(ite.iterator().hasNext());
-
-
-	}*/
 	
 	/*public void testCerrarFichaje() {
 
 	MongoCollection<Document> testFichaje = getCollection("Fichajes");
 	
-	Document doc = new Document();
-	doc.get("_id").equals("02");
-	doc.append("horaCierre", "00:30:00");
-	doc.append("Estado", "Cerrado");
+	Document doc = new Document("_id", new Document("$regex", "04"));
+	Document doc2 = new Document ().append("$set", new Document().append("horaCierre", "00:30:00").append("Estado", "Cerrado"));
 	
-	DBBroker db = new DBBroker();
-	db.insertarDocumento(testFichaje, doc);
-	FindIterable<Document> ite = testFichaje.find(doc);
-	assertTrue(ite.iterator().hasNext());
+	testFichaje.updateOne(doc, doc2);
 
 
 }*/
+	
+
+	
 	/*public void testInsertarIncidencia() {
 
 	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
@@ -136,14 +116,14 @@ public class BBDDpruebas {
 	doc.append("fechaFin", "09/12/2018");
 	doc.append("comentario", "No cerre el fichaje de ayer");
 	DBBroker db = new DBBroker();
-	db.insertarDocumento(testFichaje, doc);
-	FindIterable<Document> ite = testFichaje.find(doc);
+	db.insertarDocumento(testIncidencia, doc);
+	FindIterable<Document> ite = testIncidencia.find(doc);
 	assertTrue(ite.iterator().hasNext());
 
 
 }*/
 	
-	public void testEliminarIncidencia() {
+	/*public void testEliminarIncidencia() {
 
 	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
 
@@ -159,7 +139,18 @@ public class BBDDpruebas {
 	doc.append("comentario", "No cerre el fichaje de ayer");
 	testIncidencia.deleteOne(doc);
 
-	DBBroker db = new DBBroker();
+
+}*/
+	
+	public void testResolverIncidencia() {
+
+	MongoCollection<Document> testIncidencias = getCollection("Incidencias");
+	
+	Document doc = new Document("_id", new Document("$regex", "03"));
+	Document doc2 = new Document ().append("$set", new Document().append("mensaje", "resuelta"));
+	
+	testIncidencias.updateOne(doc, doc2);
+
 
 }
 	
