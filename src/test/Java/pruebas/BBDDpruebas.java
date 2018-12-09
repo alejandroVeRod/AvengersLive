@@ -123,9 +123,9 @@ public class BBDDpruebas {
 
 
 }*/
-	public void testInsertarIncidencia() {
+	/*public void testInsertarIncidencia() {
 
-	MongoCollection<Document> testFichaje = getCollection("Incidencias");
+	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
 	
 	Document doc = new Document();
 	doc.append("_id", "03");
@@ -140,6 +140,26 @@ public class BBDDpruebas {
 	FindIterable<Document> ite = testFichaje.find(doc);
 	assertTrue(ite.iterator().hasNext());
 
+
+}*/
+	
+	public void testEliminarIncidencia() {
+
+	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
+
+	Document doc = new Document();
+	
+	
+	doc.append("_id", "03");
+	doc.append("idEmpleado", "03");
+	doc.append("tipo", "Fichaje");
+	doc.append("mensaje", "en espera");
+	doc.append("fechaInicio", "09/12/2018");
+	doc.append("fechaFin", "09/12/2018");
+	doc.append("comentario", "No cerre el fichaje de ayer");
+	testIncidencia.deleteOne(doc);
+
+	DBBroker db = new DBBroker();
 
 }
 	
