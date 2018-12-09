@@ -88,7 +88,7 @@ public class BBDDpruebas {
 
 	}*/
 	
-	public void testCerrarFichaje() {
+	/*public void testInsertarFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 		
@@ -105,6 +105,42 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 
-	}
+	}*/
+	
+	/*public void testCerrarFichaje() {
+
+	MongoCollection<Document> testFichaje = getCollection("Fichajes");
+	
+	Document doc = new Document();
+	doc.get("_id").equals("02");
+	doc.append("horaCierre", "00:30:00");
+	doc.append("Estado", "Cerrado");
+	
+	DBBroker db = new DBBroker();
+	db.insertarDocumento(testFichaje, doc);
+	FindIterable<Document> ite = testFichaje.find(doc);
+	assertTrue(ite.iterator().hasNext());
+
+
+}*/
+	public void testInsertarIncidencia() {
+
+	MongoCollection<Document> testFichaje = getCollection("Incidencias");
+	
+	Document doc = new Document();
+	doc.append("_id", "03");
+	doc.append("idEmpleado", "03");
+	doc.append("tipo", "Fichaje");
+	doc.append("mensaje", "en espera");
+	doc.append("fechaInicio", "09/12/2018");
+	doc.append("fechaFin", "09/12/2018");
+	doc.append("comentario", "No cerre el fichaje de ayer");
+	DBBroker db = new DBBroker();
+	db.insertarDocumento(testFichaje, doc);
+	FindIterable<Document> ite = testFichaje.find(doc);
+	assertTrue(ite.iterator().hasNext());
+
+
+}
 	
 }
