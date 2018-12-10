@@ -13,7 +13,7 @@ public class Userspruebas {
 	@Test 
 	public void testUsuarioRegistrado() {
 		Empleado empl =new Empleado();
-		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","Enrique123");
+		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","1234");
 		assertTrue(resultado);
 		
 	}

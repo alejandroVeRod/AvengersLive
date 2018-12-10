@@ -16,10 +16,10 @@ import modelo.mongodb.DBBroker;
 
 public class BBDDpruebas {
 
-	private static MongoClient cliente = null;
-	private static MongoDatabase bd = null;
+	private MongoClient cliente = null;
+	private MongoDatabase bd = null;
 	private MongoCursor<Document> elementos;
-	private static MongoCollection<Document> dbEmpleadoTest;
+	private MongoCollection<Document> dbEmpleadoTest;
 
 	// Collecciones
 	private String TestUsuarios = null;
@@ -28,8 +28,7 @@ public class BBDDpruebas {
 
 	}
 
-	@Test 
-	public static MongoCollection<Document> getCollection(String nombreColeccion) {
+	public MongoCollection<Document> getCollection(String nombreColeccion) {
 		String acceso = "mongodb://usuarioGeneral:usuarioGeneral2018@ds233763.mlab.com:33763/avengerslive";
 		MongoClientURI uri = new MongoClientURI(acceso);
 		cliente = new MongoClient(uri);
@@ -38,11 +37,12 @@ public class BBDDpruebas {
 
 	}
 
+
 	@Test 
+
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 		Document doc = new Document();
-		doc.append("_id", "01");
 		doc.append("email", "c");
 		doc.append("contrasena", "c");
 		doc.append("nombre", "c c c");
@@ -52,6 +52,7 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
+
 	@Test 
 	public void testEliminarEmpleado() {
 
@@ -66,23 +67,17 @@ public class BBDDpruebas {
 		doc.append("rol", "administrador");
 
 		DBBroker db = new DBBroker();
-
 		db.insertarDocumento(testEmpleado, doc);
-
 		FindIterable<Document> ite = testEmpleado.find(doc);
-
 		db.borrarDocumento(testEmpleado, doc);
-
-		assertFalse(ite.iterator().hasNext());
+		assertFalse(ite.iterator().hasNext());		 
 
 	}
+
 	@Test 
 	public void testAbrirFichaje() {
-
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
-
 		Document doc = new Document();
-		doc.append("_id", "04");
 		doc.append("idEmpleado", "04");
 		doc.append("fechaFichaje", "07/12/2018");
 		doc.append("horaEntrada", "00:00:00");
@@ -92,9 +87,10 @@ public class BBDDpruebas {
 		db.insertarDocumento(testFichaje, doc);
 		FindIterable<Document> ite = testFichaje.find(doc);
 		assertTrue(ite.iterator().hasNext());
-
 	}
+
 	@Test 
+
 	public void testCerrarFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
@@ -112,7 +108,6 @@ public class BBDDpruebas {
 		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
 
 		Document doc = new Document();
-		doc.append("_id", "03");
 		doc.append("idEmpleado", "03");
 		doc.append("tipo", "Fichaje");
 		doc.append("mensaje", "en espera");
