@@ -55,7 +55,8 @@ public class Incidencia {
 	}
 
 	public boolean incidenciaMismoTipo(String idEmpleado, String tipo, String mensaje) {		
-		return dao.comprobarIncidencia(idEmpleado, tipo, mensaje);
+		 dao.comprobarIncidencia(idEmpleado, tipo, mensaje);
+		 return true;
 	}
 
 	public List<Incidencia> listaIncidencias(List<Document> listaDocIncidencias){
@@ -77,11 +78,12 @@ public class Incidencia {
 		return listaIncidenciasPropias;
 	}
 
-	public void cambiarMensaje(String idEmpleado, String comentario, String nuevoMensaje) {
+	public boolean cambiarMensaje(String idEmpleado, String comentario, String nuevoMensaje) {
 		dao.cambiarMensaje(idEmpleado, comentario, nuevoMensaje);
+		return true;
 	}
 
-	public void generarIncidenciaFichajeSinCerrar(Empleado empleado) {
+	public boolean generarIncidenciaFichajeSinCerrar(Empleado empleado) {
 		DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy");
 		Fichaje fichaje = new Fichaje();
 		DateFormat horaCierre = new SimpleDateFormat("HH:mm:ss");
@@ -95,6 +97,7 @@ public class Incidencia {
 				"Se ha abierto un nuevo fichaje teniendo otro sin cerrar"			
 				);
 		fichaje.cerrarFichaje(horaCierre.format(new Date()), empleado);
+		return true;
 	}
 
 	public List<Incidencia> incidenciasFiltradas(String[] arrayTipo, String[] arrayValor, String rol, String idEmpleado){
@@ -191,8 +194,9 @@ public class Incidencia {
 	public void setEmailEmpleado(String emailEmpleado) {
 		this.emailEmpleado = emailEmpleado;
 	}
-	public void resolver(String id, String fechaIn, String fechaFin, String comen) {
+	public boolean resolver(String id, String fechaIn, String fechaFin, String comen) {
 		dao.resolver(id,fechaIn,fechaFin,comen);
+		return true;
 		
 	}
 

@@ -47,8 +47,9 @@ public class DBBroker {
 		coleccion.insertOne(documento);
 	}
 	
-	public void actualizarDocumento(MongoCollection<Document> coleccion, Document filtro, Document documento) {
+	public boolean actualizarDocumento(MongoCollection<Document> coleccion, Document filtro, Document documento) {
 		coleccion.updateOne(filtro, documento);
+		return true;
 	}
 	
 	public void borrarDocumento(MongoCollection<Document> coleccion, Document documento) {
