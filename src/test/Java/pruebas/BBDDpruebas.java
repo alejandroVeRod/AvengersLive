@@ -28,6 +28,7 @@ public class BBDDpruebas {
 
 	}
 
+	@Test 
 	public static MongoCollection<Document> getCollection(String nombreColeccion) {
 		String acceso = "mongodb://usuarioGeneral:usuarioGeneral2018@ds233763.mlab.com:33763/avengerslive";
 		MongoClientURI uri = new MongoClientURI(acceso);
@@ -37,6 +38,7 @@ public class BBDDpruebas {
 
 	}
 
+	@Test 
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 		Document doc = new Document();
@@ -50,7 +52,7 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
-
+	@Test 
 	public void testEliminarEmpleado() {
 
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
@@ -74,7 +76,7 @@ public class BBDDpruebas {
 		assertFalse(ite.iterator().hasNext());
 
 	}
-
+	@Test 
 	public void testAbrirFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
@@ -92,7 +94,7 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 	}
-
+	@Test 
 	public void testCerrarFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
@@ -104,7 +106,7 @@ public class BBDDpruebas {
 		testFichaje.updateOne(doc, doc2);
 
 	}
-
+	@Test 
 	public void testInsertarIncidencia() {
 
 		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
@@ -123,7 +125,7 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 	}
-
+	@Test 
 	public void testEliminarIncidencia() {
 
 		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
@@ -140,7 +142,7 @@ public class BBDDpruebas {
 		testIncidencia.deleteOne(doc);
 
 	}
-
+	@Test 
 	public void testResolverIncidencia() {
 
 		MongoCollection<Document> testIncidencias = getCollection("Incidencias");
