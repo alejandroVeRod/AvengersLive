@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 organization=alejandroverod-github
 projectKey=avengersLive
 serverUrl=https://sonarcloud.io
@@ -5,3 +6,12 @@ serverVersion=7.5.0.19741
 dashboardUrl=https://sonarcloud.io/dashboard?id=avengersLive
 ceTaskId=AWeS74f99F5tYFz-WIsW
 ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeS74f99F5tYFz-WIsW
+=======
+organization=kikoenriko-github
+projectKey=Kikoenriko_AvengersLive
+serverUrl=https://sonarcloud.io
+serverVersion=7.5.0.19741
+dashboardUrl=https://sonarcloud.io/dashboard?id=Kikoenriko_AvengersLive
+ceTaskId=AWeNeEKh_dks3zB7O9tY
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeNeEKh_dks3zB7O9tY
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
