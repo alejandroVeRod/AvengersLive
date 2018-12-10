@@ -82,7 +82,7 @@ public class DAOFichaje {
 		
 		return fichajes;
 	}
-	public void editarFichaje(String dni, String horAh, String horAm, String horAs, String horCh, String horCm,
+	public boolean editarFichaje(String dni, String horAh, String horAm, String horAs, String horCh, String horCm,
 			String horCs, String dia, String mes, String ano, String estado,Fichaje fichaje) {
 		
 
@@ -149,6 +149,7 @@ public class DAOFichaje {
 		cambio.put("fechaFichaje",fechaFich);
 		documento.put("$set", cambio);
 		db.actualizarDocumento(coleccion, filtro, documento);
+		return true;
 		
 	}
 

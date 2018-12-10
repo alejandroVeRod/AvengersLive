@@ -14,7 +14,7 @@ public class Userspruebas {
 	public void testUsuarioRegistrado() {
 		Empleado empl =new Empleado();
 		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","1234");
-		assertTrue(resultado);
+		assertTrue(!resultado);
 		
 	}
 
@@ -42,7 +42,55 @@ public class Userspruebas {
 		assertTrue(!resultado);
 		
 	}
-
-
 	
+	@Test
+	public void testRecuperarContrasena() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu.uclm.es");
+		assertTrue(resultado);
+		
+	}
+	
+	@Test
+	public void testRecuperarContrasenaFalso() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu3138.uclm.es");
+		assertTrue(!resultado);
+		
+	}
+	
+	@Test
+	public void testRecuperarContrasenaFalsos() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu3138.uclm.es");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasena() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("1Informatica");
+		assertTrue(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasenaIncumplidos() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("hola");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasenaIncumplido() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("hi");
+		assertTrue(!resultado);
+		
+	}
+	
+
+
 }

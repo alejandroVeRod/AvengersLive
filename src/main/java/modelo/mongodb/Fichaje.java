@@ -81,9 +81,10 @@ public class Fichaje {
 		this.estado = estado;
 	}
 
-	public void editarFichaje(String dni ,String horAh,String horAm,String horAs,String horCh ,
+	public boolean editarFichaje(String dni ,String horAh,String horAm,String horAs,String horCh ,
 			String horCm,String horCs,String dia,String mes,String ano,String estado) {
 				dao.editarFichaje(dni,horAh,horAm,horAs,horCh,horCm,horCs,dia,mes,ano,estado,this); 
+				return true;
 			}
 	
 	public boolean fichajesAbiertos(String id) {
