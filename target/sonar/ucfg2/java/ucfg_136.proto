@@ -1,0 +1,43 @@
+
+Cmodelo.mongodb.GeneradorContrasena#getPinNumber()Ljava/lang/String;
+__unknown_file ("1*†
+1a
+<<<<<<< HEAD
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java	 (§
+¤
+a
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java  ('
+%0"__id*3*1$
+"modelo.mongodb.GeneradorContrasena"	
+NUMEROS†
+ƒ
+a
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java	 (+
+%1"`modelo.mongodb.GeneradorContrasena#getContrasenaAleatoria(Ljava/lang/String;I)Ljava/lang/String;*&"$
+"modelo.mongodb.GeneradorContrasena*
+
+%0*
+"""k
+a
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java (,
+=======
+WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java	 (§
+¤
+a
+WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java  ('
+%0"__id*3*1$
+"modelo.mongodb.GeneradorContrasena"	
+NUMEROS†
+ƒ
+a
+WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java	 (+
+%1"`modelo.mongodb.GeneradorContrasena#getContrasenaAleatoria(Ljava/lang/String;I)Ljava/lang/String;*&"$
+"modelo.mongodb.GeneradorContrasena*
+
+%0*
+"""k
+a
+WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java (,
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+
+%1
