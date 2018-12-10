@@ -66,7 +66,9 @@ public class loginController {
 
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
-		String email, contrasena, estado = null;
+		String email = null;
+		String contrasena = null;
+		String estado = null;
 		Document fich = null;
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
@@ -110,7 +112,8 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.POST, value = "enviarPeticionContrasena.htm")
 	public ModelAndView enviarPeticionContrasena(HttpServletRequest request, HttpServletResponse response,
 			ModelMap model) throws Exception {
-		String mensaje, emailDni;
+		String mensaje; 
+		String emailDni;
 		emailDni = request.getParameter("inputEmail");
 		if (empleado.recuperarContrasena(emailDni))
 			mensaje = "Te hemos enviado una nueva contraseña al correo introducido";
@@ -167,7 +170,11 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.POST, value = "cambiarContrasena.htm")
 	public ModelAndView cambiarContrasena(HttpServletRequest request, HttpServletResponse response, ModelMap model)
 			throws Exception {
-		String mensaje, email, contrasena, contrasenaNueva1, contrasenaNueva2;
+		String mensaje;
+		String email;
+		String contrasena;
+		String contrasenaNueva1;
+		String contrasenaNueva2;
 		email = empleado.getEmail();
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputContrasena"));
 		contrasenaNueva1 = request.getParameter("inputContrasenaNueva1");
