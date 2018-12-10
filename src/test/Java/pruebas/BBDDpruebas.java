@@ -37,13 +37,9 @@ public class BBDDpruebas {
 
 	}
 
-<<<<<<< HEAD
+
 	@Test
 
-
-=======
-	@Test 
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 		Document doc = new Document();
@@ -56,14 +52,9 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
-<<<<<<< HEAD
 
-	public void testEliminarEmpleado() {
-		
-		MongoCollection<Document> testEmpleado=getCollection("Empleados"); 
-		 
-		Document doc = new Document(); 
-=======
+
+
 	@Test 
 	public void testEliminarEmpleado() {
 
@@ -78,29 +69,24 @@ public class BBDDpruebas {
 		doc.append("rol", "administrador");
 
 		DBBroker db = new DBBroker();
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+
 
 		db.insertarDocumento(testEmpleado, doc);
 
 		FindIterable<Document> ite = testEmpleado.find(doc);
 
 		db.borrarDocumento(testEmpleado, doc);
-<<<<<<< HEAD
-		
-		assertFalse(ite.iterator().hasNext());		 
 
-=======
 
 		assertFalse(ite.iterator().hasNext());
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
 
 	}
-<<<<<<< HEAD
 
 
-=======
+
+
 	@Test 
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+
 	public void testAbrirFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
@@ -117,12 +103,9 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 	}
-<<<<<<< HEAD
 
-
-=======
 	@Test 
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+
 	public void testCerrarFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
