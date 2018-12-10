@@ -2,6 +2,17 @@
 Mmodelo.mongodb.GeneradorContrasena#getContrasenaAleatoria()Ljava/lang/String;
 __unknown_file ("1*Â
 1a
+<<<<<<< HEAD
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java	 (ì
+é
+a
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java	 ("
+%0"Nmodelo.mongodb.GeneradorContrasena#getContrasenaAleatoria(I)Ljava/lang/String;*&"$
+"modelo.mongodb.GeneradorContrasena*
+"""k
+a
+W/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/GeneradorContrasena.java (#
+=======
 WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java	 (ì
 é
 a
@@ -11,5 +22,6 @@ WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContras
 """k
 a
 WC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\GeneradorContrasena.java (#
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
 
 %0

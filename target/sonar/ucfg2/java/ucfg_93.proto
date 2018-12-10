@@ -2,7 +2,13 @@
 $modelo.mongodb.Empleado#esNumero(C)Z
 __unknown_file ("""1*½
 1V
+<<<<<<< HEAD
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/Empleado.javaW W( "`
+V
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/Empleado.javaW W( 
+=======
 LC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Empleado.javaW W( "`
 V
 LC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Empleado.javaW W( 
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
 ""

@@ -15,7 +15,6 @@ public class DAOEmpleado {
 	private MongoCollection<Document> coleccion;
 
 	public DAOEmpleado() {
-
 		db = new DBBroker();
 		coleccion = db.devolverColeccion("Empleados");
 	}

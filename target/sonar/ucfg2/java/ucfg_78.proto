@@ -2,6 +2,23 @@
 smodelo.mongodb.DBBroker#documentosEnColeccion(Lcom/mongodb/client/MongoCollection;)Lcom/mongodb/client/MongoCursor;
 __unknown_file (	coleccion"1*µ
 1V
+<<<<<<< HEAD
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DBBroker.java;	 ;(¼
+¹
+V
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DBBroker.java;	 ;(
+%0"Jcom.mongodb.client.MongoCollection#find()Lcom/mongodb/client/FindIterable;*
+
+	coleccion¶
+³
+V
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DBBroker.java;	 ;($
+%1"Kcom.mongodb.client.MongoIterable#iterator()Lcom/mongodb/client/MongoCursor;*
+
+%0"`
+V
+L/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DBBroker.java; ;(%
+=======
 LC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DBBroker.java;	 ;(¼
 ¹
 V
@@ -17,5 +34,6 @@ LC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DBBroker.java;
 %0"`
 V
 LC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\DBBroker.java; ;(%
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
 
 %1
