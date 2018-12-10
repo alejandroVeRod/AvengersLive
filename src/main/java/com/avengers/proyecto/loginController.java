@@ -209,7 +209,13 @@ public class loginController {
 	public ModelAndView registrarIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
 		model.addAttribute("est", est);
-		String idEmpleado, tipo, fechaInicio, fechaFin, comentario, mensajeEstado, mensaje;
+		String idEmpleado;
+		String tipo;
+		String fechaInicio;
+		String fechaFin;
+		String comentario;
+		String mensajeEstado;
+		String mensaje;
 		idEmpleado = empleado.getDni();
 		tipo = request.getParameter("tipo");
 		fechaInicio = request.getParameter("fechaInicio");
