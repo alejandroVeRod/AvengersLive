@@ -36,13 +36,6 @@ public class BBDDpruebas {
 		return bd.getCollection(nombreColeccion);
 
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'E01TestEnrique' of https://github.com/alejandroVeRod/AvengersLive.git
-
-	@Test
-<<<<<<< HEAD
 
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleado");
@@ -57,48 +50,30 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
-=======
->>>>>>> branch 'E01TestEnrique' of https://github.com/alejandroVeRod/AvengersLive.git
 
 	public void testEliminarEmpleado() {
-<<<<<<< HEAD
 
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 
 		Document doc = new Document();
 
-		testEmpleado.insertOne(doc);
-		doc.append("email", "pruebaenrique@hotmail.com");
-		doc.append("contrasena", "Enrique1234");
+		doc.append("_id", "38292749");
+		doc.append("email", "minchata9882@gmieal.com");
+		doc.append("contrasena", "1234");
 		doc.append("nombre", "Enrique");
 		doc.append("rol", "administrador");
 
 		DBBroker db = new DBBroker();
-=======
-		
-		MongoCollection<Document> testEmpleado=getCollection("Empleados"); 
-		 
-		Document doc = new Document(); 
 
-		doc.append("_id", "38292749"); 
-		doc.append("email", "minchata9882@gmieal.com"); 
-		doc.append("contrasena", "1234"); 
-		doc.append("nombre", "Enrique"); 	 
-		doc.append("rol", "administrador"); 
- 
-		DBBroker db=new DBBroker(); 
- 
-		db.insertarDocumento(testEmpleado, doc); 
-		
-		FindIterable<Document> ite= testEmpleado.find(doc); 
- 
+		db.insertarDocumento(testEmpleado, doc);
+
+		FindIterable<Document> ite = testEmpleado.find(doc);
+
 		db.borrarDocumento(testEmpleado, doc);
-		
-		assertFalse(ite.iterator().hasNext());		 
->>>>>>> branch 'E01TestEnrique' of https://github.com/alejandroVeRod/AvengersLive.git
+
+		assertFalse(ite.iterator().hasNext());
 
 	}
-<<<<<<< HEAD
 
 	public void testAbrirFichaje() {
 
@@ -117,10 +92,6 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 	}
-=======
-	
-}
->>>>>>> branch 'E01TestEnrique' of https://github.com/alejandroVeRod/AvengersLive.git
 
 	public void testCerrarFichaje() {
 
