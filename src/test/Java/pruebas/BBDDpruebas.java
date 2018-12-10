@@ -38,7 +38,7 @@ public class BBDDpruebas {
 	}
 
 	public void testInsertarEmpleado() {
-		MongoCollection<Document> testEmpleado = getCollection("Empleado");
+		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 		Document doc = new Document();
 		doc.append("_id", "01");
 		doc.append("email", "c");
