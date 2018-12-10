@@ -1,0 +1,102 @@
+
+jmodelo.mongodb.DAOIncidencia#filtrar(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+__unknown_file (tipovalortotalIncidencias"6*–
+1[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaG	 G("n
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaG G(
+
+incidencias*ó
+3[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaD D(Ø
+¨
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaD D(
+%9"'java.util.List#add(Ljava/lang/Object;)Z*
+
+incidencias*
+
+	documento*
+5*ß
+4[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaB B(≠
+™
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaB B(&
+%5"'java.util.List#get(I)Ljava/lang/Object;*
+
+totalIncidencias*
+""z
+x
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaB B(&
+	documento"__id*
+
+%5º
+π
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaC C(
+%6";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+	documento*
+
+tipoù
+ö
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaC C($
+%7"-java.lang.Object#toString()Ljava/lang/String;*
+
+%6±
+Æ
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaC C(<
+%8"6java.lang.String#equalsIgnoreCase(Ljava/lang/String;)Z*
+
+%7*	
+
+valor*
+3
+5*ˇ
+5[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaA A(î
+ë
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.javaA A(,
+%4"java.util.List#size()I*
+
+totalIncidencias*
+4
+1*Û
+6[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java? ?(8zx
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java?# ?(6
+%0"java.util.ArrayListç
+ä
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java? ?(8
+%1"java.util.ArrayList#<init>()V*
+
+%0|
+z
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java? ?(9
+incidencias"__id*
+
+%0xv
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java@ @(#
+%2"org.bson.Documentã
+à
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java@ @(%
+%3"org.bson.Document#<init>()V*
+
+%2z
+x
+[
+Q/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/DAOIncidencia.java@ @(&
+	documento"__id*
+
+%2*
+5
