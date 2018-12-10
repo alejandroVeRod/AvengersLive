@@ -39,7 +39,7 @@ public class BBDDpruebas {
 
 	@Test
 
-	/*public void testInsertarEmpleado() {
+	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleado");
 		Document doc = new Document();
 		doc.append("_id", "01");
@@ -51,9 +51,9 @@ public class BBDDpruebas {
 		db.insertarDocumento(testEmpleado, doc);
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
-	}*/
+	}
 
-	/*public void testEliminarEmpleado() {
+	public void testEliminarEmpleado() {
 
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 
@@ -67,12 +67,12 @@ public class BBDDpruebas {
 
 		DBBroker db = new DBBroker();
 
-	}*/
+	}
 
-	/*public void testAbrirFichaje() {
+	public void testAbrirFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
-		
+
 		Document doc = new Document();
 		doc.append("_id", "04");
 		doc.append("idEmpleado", "04");
@@ -85,73 +85,65 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testFichaje.find(doc);
 		assertTrue(ite.iterator().hasNext());
 
+	}
 
-	}*/
-	
-	
-	/*public void testCerrarFichaje() {
+	public void testCerrarFichaje() {
 
-	MongoCollection<Document> testFichaje = getCollection("Fichajes");
-	
-	Document doc = new Document("_id", new Document("$regex", "04"));
-	Document doc2 = new Document ().append("$set", new Document().append("horaCierre", "00:30:00").append("Estado", "Cerrado"));
-	
-	testFichaje.updateOne(doc, doc2);
+		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 
+		Document doc = new Document("_id", new Document("$regex", "04"));
+		Document doc2 = new Document().append("$set",
+				new Document().append("horaCierre", "00:30:00").append("Estado", "Cerrado"));
 
-}*/
-	
+		testFichaje.updateOne(doc, doc2);
 
-	
-	/*public void testInsertarIncidencia() {
+	}
 
-	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
-	
-	Document doc = new Document();
-	doc.append("_id", "03");
-	doc.append("idEmpleado", "03");
-	doc.append("tipo", "Fichaje");
-	doc.append("mensaje", "en espera");
-	doc.append("fechaInicio", "09/12/2018");
-	doc.append("fechaFin", "09/12/2018");
-	doc.append("comentario", "No cerre el fichaje de ayer");
-	DBBroker db = new DBBroker();
-	db.insertarDocumento(testIncidencia, doc);
-	FindIterable<Document> ite = testIncidencia.find(doc);
-	assertTrue(ite.iterator().hasNext());
+	public void testInsertarIncidencia() {
 
+		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
 
-}*/
-	
-	/*public void testEliminarIncidencia() {
+		Document doc = new Document();
+		doc.append("_id", "03");
+		doc.append("idEmpleado", "03");
+		doc.append("tipo", "Fichaje");
+		doc.append("mensaje", "en espera");
+		doc.append("fechaInicio", "09/12/2018");
+		doc.append("fechaFin", "09/12/2018");
+		doc.append("comentario", "No cerre el fichaje de ayer");
+		DBBroker db = new DBBroker();
+		db.insertarDocumento(testIncidencia, doc);
+		FindIterable<Document> ite = testIncidencia.find(doc);
+		assertTrue(ite.iterator().hasNext());
 
-	MongoCollection<Document> testIncidencia = getCollection("Incidencias");
+	}
 
-	Document doc = new Document();
-	
-	
-	doc.append("_id", "03");
-	doc.append("idEmpleado", "03");
-	doc.append("tipo", "Fichaje");
-	doc.append("mensaje", "en espera");
-	doc.append("fechaInicio", "09/12/2018");
-	doc.append("fechaFin", "09/12/2018");
-	doc.append("comentario", "No cerre el fichaje de ayer");
-	testIncidencia.deleteOne(doc);
+	public void testEliminarIncidencia() {
 
+		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
 
-}*/
-	
+		Document doc = new Document();
+
+		doc.append("_id", "03");
+		doc.append("idEmpleado", "03");
+		doc.append("tipo", "Fichaje");
+		doc.append("mensaje", "en espera");
+		doc.append("fechaInicio", "09/12/2018");
+		doc.append("fechaFin", "09/12/2018");
+		doc.append("comentario", "No cerre el fichaje de ayer");
+		testIncidencia.deleteOne(doc);
+
+	}
+
 	public void testResolverIncidencia() {
 
-	MongoCollection<Document> testIncidencias = getCollection("Incidencias");
-	
-	Document doc = new Document("_id", new Document("$regex", "03"));
-	Document doc2 = new Document ().append("$set", new Document().append("mensaje", "resuelta"));
-	
-	testIncidencias.updateOne(doc, doc2);
+		MongoCollection<Document> testIncidencias = getCollection("Incidencias");
 
+		Document doc = new Document("_id", new Document("$regex", "03"));
+		Document doc2 = new Document().append("$set", new Document().append("mensaje", "resuelta"));
 
-}
-	
+		testIncidencias.updateOne(doc, doc2);
+
+	}
+
 }
