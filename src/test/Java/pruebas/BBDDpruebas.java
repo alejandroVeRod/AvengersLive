@@ -62,7 +62,7 @@ public class BBDDpruebas {
 		doc.append("idEmpleado", "02");
 		doc.append("fechaFichaje", "07/11/2018");
 		doc.append("horaEntrada", "23:55:03");
-		doc.append("HoraCierre", "23:55:29");
+		doc.append("horaCierre", "23:55:29");
 		doc.append("estado", "Cerrado");
 		DBBroker db = new DBBroker();
 		db.insertarDocumento(testFichaje, doc);
