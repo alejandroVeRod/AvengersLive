@@ -2,34 +2,18 @@
 icom.avengers.proyecto.loginController#recuperarContrasena()Lorg/springframework/web/servlet/ModelAndView;
 __unknown_file ("1*÷
 1d
-<<<<<<< HEAD
-Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javae e(/ùö
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javak k(/ùö
 d
-Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javae e(
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javak k(
 %0",org.springframework.web.servlet.ModelAndView⁄
 ◊
 d
-Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javae	 e(0
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javak	 k(0
 %1"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*
 
 %0*
 recuperarContrasena"n
 d
-Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javae e(1
-=======
-ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javae e(/ùö
-d
-ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javae e(
-%0",org.springframework.web.servlet.ModelAndView⁄
-◊
-d
-ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javae	 e(0
-%1"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*
-
-%0*
-recuperarContrasena"n
-d
-ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javae e(1
->>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javak k(1
 
 %0
