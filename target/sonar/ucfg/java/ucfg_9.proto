@@ -1,0 +1,127 @@
+
+’com.avengers.proyecto.loginController#crearIncidencia(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Lorg/springframework/ui/ModelMap;)Lorg/springframework/web/servlet/ModelAndView;
+__unknown_file (requestresponsemodel"paramAnnotations*⁄
+1f
+<<<<<<< HEAD
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¡ ¡(+üú
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¡ ¡(
+%0",org.springframework.web.servlet.ModelAndViewÿ
+’
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¡	 ¡(,
+%1"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*
+
+%0*
+crearIncidencia"p
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¡ ¡(-
+
+%0*Ö	
+paramAnnotationsf
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¿$ ¿(n∆
+√
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javaø ø(L
+%2"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*
+	
+requestå
+â
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¿8 ¿(?	
+request"__annotation*
+
+%2«
+ƒ
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javaø ø(L
+%3"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*
+
+
+responseç
+ä
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¿U ¿(]
+
+response"__annotation*
+
+%3ƒ
+¡
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.javaø ø(L
+%4"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*	
+
+modelä
+á
+f
+Z/Users/alejandro/git/AvengersLive/src/main/java/com/avengers/proyecto/loginController.java¿h ¿(m
+=======
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¡ ¡(+üú
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¡ ¡(
+%0",org.springframework.web.servlet.ModelAndViewÿ
+’
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¡	 ¡(,
+%1"Horg.springframework.web.servlet.ModelAndView#<init>(Ljava/lang/String;)V*
+
+%0*
+crearIncidencia"p
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¡ ¡(-
+
+%0*Ö	
+paramAnnotationsf
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¿$ ¿(n∆
+√
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javaø ø(L
+%2"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*
+	
+requestå
+â
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¿8 ¿(?	
+request"__annotation*
+
+%2«
+ƒ
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javaø ø(L
+%3"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*
+
+
+responseç
+ä
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¿U ¿(]
+
+response"__annotation*
+
+%3ƒ
+¡
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.javaø ø(L
+%4"
+__annotate*:8
+6org.springframework.web.bind.annotation.RequestMapping*	
+
+modelä
+á
+f
+ZC:\Users\Enrique\git\AvengersLive\src\main\java\com\avengers\proyecto\loginController.java¿h ¿(m
+>>>>>>> branch 'master' of https://github.com/alejandroVeRod/AvengersLive
+model"__annotation*
+
+%4*
+1
