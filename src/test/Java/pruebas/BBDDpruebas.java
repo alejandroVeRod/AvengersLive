@@ -24,7 +24,7 @@ public class BBDDpruebas {
 	// Collecciones
 	private String TestUsuarios = null;
 
-	public BBDDpruebas() {
+		public BBDDpruebas() {
 
 	}
 
@@ -36,10 +36,17 @@ public class BBDDpruebas {
 		return bd.getCollection(nombreColeccion);
 
 	}
+<<<<<<< Upstream, based on origin/master
 
+=======
+>>>>>>> 83fe17c fix
 
+<<<<<<< Upstream, based on origin/master
 	@Test 
 
+=======
+	@Test 
+>>>>>>> 83fe17c fix
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 		Document doc = new Document();
@@ -53,6 +60,12 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 	}
 
+<<<<<<< Upstream, based on origin/master
+=======
+
+
+
+>>>>>>> 83fe17c fix
 	@Test 
 	public void testEliminarEmpleado() {
 
@@ -67,14 +80,34 @@ public class BBDDpruebas {
 		doc.append("rol", "administrador");
 
 		DBBroker db = new DBBroker();
+<<<<<<< Upstream, based on origin/master
+=======
+
+>>>>>>> 83fe17c fix
 		db.insertarDocumento(testEmpleado, doc);
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		db.borrarDocumento(testEmpleado, doc);
+<<<<<<< Upstream, based on origin/master
 		assertFalse(ite.iterator().hasNext());		 
+
+	}
+=======
+
+		
+		assertFalse(ite.iterator().hasNext());		 
+
+
+>>>>>>> 83fe17c fix
+
+<<<<<<< Upstream, based on origin/master
+	@Test 
+=======
 
 	}
 
 	@Test 
+
+>>>>>>> 83fe17c fix
 	public void testAbrirFichaje() {
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 		Document doc = new Document();
