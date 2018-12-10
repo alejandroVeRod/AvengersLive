@@ -124,8 +124,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "abrirFichaje.htm")
-	public ModelAndView abrirFichaje(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView abrirFichaje(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
 		DateFormat hora = new SimpleDateFormat("HH:mm:ss");
 		DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy");
@@ -145,8 +144,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "cerrarFichaje.htm")
-	public ModelAndView cerrarFichaje(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView cerrarFichaje(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
 		DateFormat hora = new SimpleDateFormat("HH:mm:ss");
 		model.addAttribute("email", empleado.getEmail());
@@ -168,8 +166,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "cambiarContrasena.htm")
-	public ModelAndView cambiarContrasena(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView cambiarContrasena(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String mensaje;
 		String email;
 		String contrasena;
@@ -194,8 +191,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "consulta.htm")
-	public ModelAndView consulta(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView consulta(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String idEmpleado = empleado.getDni();
 		List<Document> listaFichajes = new ArrayList<Document>();
 		listaFichajes = fichaje.fichajesEmpleado(idEmpleado);
@@ -205,14 +201,12 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "crearIncidencia.htm")
-	public ModelAndView crearIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView crearIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		return new ModelAndView("crearIncidencia");
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "registrarIncidencia.htm")
-	public ModelAndView registrarIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView registrarIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
 		model.addAttribute("est", est);
 		String idEmpleado, tipo, fechaInicio, fechaFin, comentario, mensajeEstado, mensaje;
@@ -235,7 +229,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "incidenciasGestorUsuario.htm", method = RequestMethod.POST)
-	public ModelAndView incidenciasGestorUsuario(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView incidenciasGestorUsuario(HttpServletRequest request, ModelMap model) {
 		String idEmpleado = request.getParameter("idEmpleado");
 		String mensaje = request.getParameter("mensaje");
 		String comentario = request.getParameter("comentario");
@@ -253,8 +247,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "Incidencias.htm")
-	public ModelAndView consulIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView consulIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String id = request.getParameter("idEmpleado");
 		String tip = request.getParameter("tipo");
 		String email = request.getParameter("emailEmpleado");
@@ -275,8 +268,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "resolucionIncidencias.htm")
-	public ModelAndView resolverIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView resolverIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String mensaje = "";
 		String id = request.getParameter("idEmpleado");
 		String comentario = request.getParameter("comentario");
@@ -287,21 +279,18 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "GestionarUsuarios.htm")
-	public ModelAndView GestionarUsuarios(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView GestionarUsuarios(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
 		return new ModelAndView("GestionarUsuarios");
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "direccionAltaEmpleado.htm")
-	public ModelAndView direccionAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView direccionAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		return new ModelAndView("darAltaEmpleado");
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "darAltaEmpleado.htm")
-	public ModelAndView darAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView darAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String id = request.getParameter("dni");
 		String email = request.getParameter("email");
 		String nombre = request.getParameter("nombre");
@@ -315,8 +304,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "filtro.htm")
-	public ModelAndView filtros(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView filtros(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		int i = 0;
 		String[] arrayValores = new String[6];
 		String[] arrayTipos = new String[6];
@@ -369,7 +357,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "IrHome.htm")
-	public ModelAndView IrHome(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView IrHome(HttpServletRequest request, ModelMap model){
 
 		model.addAttribute("email", empleado.getEmail());
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
@@ -385,8 +373,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "incis.htm")
-	public ModelAndView incis(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView incis(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String id = request.getParameter("id");
 		model.addAttribute("id", id);
 		listaFichajes = fichaje.fichajesEmpleado(id);
@@ -397,8 +384,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "formFich.htm")
-	public ModelAndView formFich(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView formFich(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		model.addAttribute("dni", dniEmpl);
 		model.addAttribute("emailEmpleado", mail);
 		String email = request.getParameter("emailEmpleado");
@@ -430,7 +416,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "resolverInc.htm", method = RequestMethod.POST)
-	public ModelAndView Resolverincidencias(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView Resolverincidencias(HttpServletRequest request, ModelMap model){
 		String id = request.getParameter("idEmpleado");
 		String fechaIn = request.getParameter("fechaInicio");
 		String fechaFin = request.getParameter("fechaFin");
@@ -449,7 +435,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "incs.htm")
-	public ModelAndView inc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws Exception {
+	public ModelAndView inc(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String id = request.getParameter("idEmpleado");
 		model.addAttribute("id", id);
 		listaFichajes = fichaje.fichajesEmpleado(id);
@@ -460,8 +446,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "RellenarIncidencia.htm")
-	public ModelAndView RellenarIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView RellenarIncidencia(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		model.addAttribute("id", inc.getIdEmpleado());
 		model.addAttribute("tip", inc.getTipo());
 		model.addAttribute("email", inc.getEmailEmpleado());
@@ -473,8 +458,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "retroceder.htm")
-	public ModelAndView accesoModulo(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView accesoModulo(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
 		listaEmpleados = empleado.consultarEmpleados();
 		model.addAttribute("Empleados", listaEmpleados);
@@ -482,8 +466,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "eliminarEmpleado.htm")
-	public ModelAndView eliminarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView eliminarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String email = request.getParameter("emailEmpleado");
 		String nombre = request.getParameter("nombre");
 		String dni = request.getParameter("dni");
@@ -496,8 +479,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "CrearIncYCerrarFich.htm")
-	public ModelAndView CrearIncYCerrarFich(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView CrearIncYCerrarFich(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
 		model.addAttribute("est", est);
 
@@ -527,8 +509,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "modificarEmpleado.htm")
-	public ModelAndView modificarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView modificarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String email = request.getParameter("emailEmpleado");
 		String dni = request.getParameter("dni");
 		String nombre = request.getParameter("nombre");
@@ -554,8 +535,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "modEmpleado.htm")
-	public ModelAndView modEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView modEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
 		String dni = request.getParameter("dni");
 
@@ -578,8 +558,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "promocionarEmpleado.htm")
-	public ModelAndView promocionarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView promocionarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String email = request.getParameter("emailEmpleado");
 		String rol = request.getParameter("rol");
 		empleado.cambiarRol(email, rol);
@@ -591,7 +570,7 @@ public class loginController {
 
 	////////////// METODOS GET PARA NAVEGACION DEL MENU////////////////7
 	@RequestMapping(method = RequestMethod.GET, value = "home.htm")
-	public ModelAndView home(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView home(HttpServletRequest request, ModelMap model) {
 		String estado = null;
 		model.addAttribute("email", empleado.getEmail());
 		model.addAttribute("estado", estado);
@@ -605,8 +584,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "consulta.htm")
-	public ModelAndView consultaFichajes(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView consultaFichajes(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String idEmpleado = empleado.getDni();
 		model.addAttribute("email", empleado.getEmail());
 		List<Document> listaFichajes = new ArrayList<Document>();
@@ -624,7 +602,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "incidenciasGestorUsuario.htm")
-	public ModelAndView consultarIncidencias(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView consultarIncidencias(HttpServletRequest request, ModelMap model) {
 		model.addAttribute("id", empleado.getDni());
 		model.addAttribute("email", empleado.getEmail());
 		List<Incidencia> listaIncidencias = new ArrayList<Incidencia>();
@@ -654,8 +632,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "accesoModulo.htm")
-	public ModelAndView gestionEmpleados(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView gestionEmpleados(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		model.addAttribute("id", empleado.getDni());
 		model.addAttribute("email", empleado.getEmail());
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
@@ -672,8 +649,7 @@ public class loginController {
 	///////////////////////////////////////////////////
 
 	@RequestMapping(value = "AlmFich.htm")
-	public ModelAndView AlmFich(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView AlmFich(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 
 		String dni = request.getParameter("idEmpleado");
 		String horAh = request.getParameter("horAh");
@@ -711,8 +687,7 @@ public class loginController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "IncidenciasUsers.htm")
-	public ModelAndView consulIncidenciasUsers(HttpServletRequest request, HttpServletResponse response, ModelMap model)
-			throws Exception {
+	public ModelAndView consulIncidenciasUsers(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String id = request.getParameter("idEmpleado");
 		String tip = request.getParameter("tipo");
 		String email = request.getParameter("emailEmpleado");
