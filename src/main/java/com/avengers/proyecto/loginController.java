@@ -43,27 +43,6 @@ public class loginController {
 		return MV;
 	}
 
-	// @RequestMapping(value = "atras.htm", method = RequestMethod.POST)
-	// public ModelAndView atras(HttpServletRequest request, ModelMap model) throws
-	// Exception {
-	// String estado = null;
-	// List<Document> listaFichajes = new ArrayList<Document>();
-	// Document fich = null;
-	// if(!listaFichajes.isEmpty()) {
-	// for (int i=0; i<listaFichajes.size(); i++) {
-	// fich = listaFichajes.get(listaFichajes.size()-1);
-	// }
-	// estado = fich.get("estado").toString();
-	// }
-	// model.addAttribute("email", empleado.getEmail());
-	// model.addAttribute("estado", estado);
-	// if (empleado.getRol().equals("usuario"))
-	// return new ModelAndView("home");
-	// else if(empleado.getRol().equals("gestor"))return new
-	// ModelAndView("gestor");//unica línea añadida
-	// else return new ModelAndView("admin");
-	// }
-
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
 		String email = null;

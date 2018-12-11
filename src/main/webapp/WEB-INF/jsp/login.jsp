@@ -352,7 +352,7 @@ header {
 				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
 					for="tab-1" class="tab">LOGIN</label>
 
-				<form action="home.htm" method="post" class="login-form">
+				<form action="home.htm" method="post" class="login-form" autocomplete="off">
 					<div class="sign-in-htm">
 						<div class="group">
 							<label for="user" class="label">Email</label> <input name="inputEmail"
