@@ -26,4 +26,28 @@ public class FichajePruebas {
 		
 	}
 
+	@Test
+	public void CerrarFichajeFecha() {
+		
+		Fichaje fichaje =new Fichaje("705849111","5/11/2018","23:51:00");
+		Empleado empl =new Empleado("Enrique.Armero@alu.uclm.es","Enrique123");
+		
+		fichaje.cerrarFichaje("23:59:99", empl);
+		
+		assertTrue(fichaje.getHoraCierre().equals("23:59:99")&&fichaje.getIdEmpleado().equals("705849111"));
+	
+	}
+	
+	
+	@Test
+	public void CerrarFichajeNuevoDia() {
+		
+		Fichaje fichaje =new Fichaje("705849111","5/11/2018","23:51:00");
+		Empleado empl =new Empleado("Enrique.Armero@alu.uclm.es","Enrique123");
+		
+		fichaje.cerrarFichaje("00:00:00", empl);
+		
+		assertTrue(fichaje.getHoraCierre().equals("00:00:00")&&fichaje.getIdEmpleado().equals("705849111"));
+	
+	}
 }
