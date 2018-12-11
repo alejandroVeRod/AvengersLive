@@ -45,5 +45,12 @@ public void testNoCambiarMensaje() {
 	boolean resultado=in.cambiarMensaje("717207848P", "C", "Dias libres");
 	assertTrue(!resultado);
 }
+@Test
+public void testContraseñasIguales() {
+	Empleado empl =new Empleado();
+	assertTrue(empl.contrasenaCoincide("11","11"));
+	
+}
+
 
 }

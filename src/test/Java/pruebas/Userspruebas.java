@@ -3,8 +3,11 @@ package pruebas;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.junit.Test;
 
+import modelo.mongodb.DAOEmpleado;
 import modelo.mongodb.Empleado;
 import modelo.mongodb.Fichaje;
 
@@ -14,7 +17,7 @@ public class Userspruebas {
 	public void testUsuarioRegistrado() {
 		Empleado empl =new Empleado();
 		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","1234");
-		assertTrue(!resultado);
+		assertTrue(resultado);
 		
 	}
 
@@ -91,6 +94,12 @@ public class Userspruebas {
 		
 	}
 	
-
+	@Test
+	public void testContraseñasIguales() {
+		Empleado empl =new Empleado();
+		assertTrue(empl.contrasenaCoincide("11","11"));
+		
+	}
+	
 
 }
