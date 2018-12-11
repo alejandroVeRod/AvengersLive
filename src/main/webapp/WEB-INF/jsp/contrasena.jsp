@@ -203,20 +203,20 @@
 
 				</p>
 
-				<form action="cambiarContrasena.htm" method="post"
+				<form action="cambiarContrasena.htm" method="post" autocomplete="off"
 					class="login-form">
 					<div class="sign-in-htm">
 						<div class="group">
 
-							<input type="password" class="input" name="inputContrasena"
+							<input type="password" class="input" name="inputContrasena" autocomplete="off"
 								placeholder="Contraseña actual" required autofocus> 
 								<br>
 								<input
-								type="password" class="input" name="inputContrasenaNueva1"
+								type="password" class="input" name="inputContrasenaNueva1" autocomplete="off"
 								placeholder="Nueva contraseña" required> 
 								<br>
 								<input
-								type="password" class="input" name="inputContrasenaNueva2"
+								type="password" class="input" name="inputContrasenaNueva2" autocomplete="off"
 								placeholder="Repetir nueva contraseña" required>
 						</div>
 	<br>

@@ -13,6 +13,9 @@ import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
 import modelo.mongodb.DBBroker;
+import modelo.mongodb.Empleado;
+import modelo.mongodb.Fichaje;
+import modelo.mongodb.Incidencia;
 
 public class BBDDpruebas {
 
@@ -36,7 +39,6 @@ public class BBDDpruebas {
 		return bd.getCollection(nombreColeccion);
 
 	}
-
 
 	@Test 
 
@@ -137,8 +139,9 @@ public class BBDDpruebas {
 		testIncidencia.deleteOne(doc);
 
 	}
+	
 	@Test 
-	public void testResolverIncidencia() {
+	public void testResolverIncidenci() {
 
 		MongoCollection<Document> testIncidencias = getCollection("Incidencias");
 
@@ -148,5 +151,149 @@ public class BBDDpruebas {
 		testIncidencias.updateOne(doc, doc2);
 
 	}
+	
+	@Test 
+	public void testUsuarioRegistrado() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","1234");
+		assertTrue(!resultado);
+		
+	}
+
+
+	@Test 
+	public void testUsuarioNoRegistrado() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","5678");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testPasswordCorrectaEmailNo() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("Enrique.Armero3138@alu.uclm.es","Enrique123");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testPasswordEmailFalsos() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("Enrique.Armero3138@alu.uclm.es","123432424");
+		assertTrue(!resultado);
+		
+	}
+	
+	@Test
+	public void testRecuperarContrasena() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu.uclm.es");
+		assertTrue(resultado);
+		
+	}
+	
+	@Test
+	public void testRecuperarContrasenaFalso() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu3138.uclm.es");
+		assertTrue(!resultado);
+		
+	}
+	
+	@Test
+	public void testRecuperarContrasenaFalsos() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.recuperarContrasena("Enrique.Armero@alu3138.uclm.es");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasena() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("1Informatica");
+		assertTrue(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasenaIncumplidos() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("hola");
+		assertFalse(resultado);
+		
+	}
+	
+	@Test
+	public void testRequisitosContrasenaIncumplido() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.requisitosContrasena("hi");
+		assertTrue(!resultado);
+		
+	}
+	
+
+	@Test 
+	public void testFichajeRegistrado() {
+		Fichaje fic =new Fichaje();
+		boolean resultado=fic.editarFichaje("05980503C", "09","38", "14", "09", "43", "25", "06", "11", "2018", "Cerrado");
+		assertTrue(resultado);
+		
+	}
+	
+	@Test 
+	public void testFichajeNoRegistrados() {
+		Fichaje fic =new Fichaje();
+		boolean resultado=fic.editarFichaje("05980509P", "0","38", "14", "09", "43", "25", "06", "11", "2018", "Abierto");
+		assertFalse(!resultado);
+		
+	}
+	
+	@Test
+	public void testResolverIncidencia() {
+		Incidencia in =new Incidencia();
+		boolean resultado=in.resolver("70593055Y", "04/12/2018", "04/12/2018", "Se ha abierto un nuevo fichaje teniendo otro sin cerrar");
+		assertTrue(resultado);
+	}
+
+	@Test
+	public void testNoResolverIncidencia() {
+		Incidencia in =new Incidencia();
+		boolean resultado=in.resolver("70593", "04/12/2018", "04/12/2018", "Se ha abierto un nuevo fichaje teniendo otro sin cerrar");
+		assertFalse(!resultado);
+	}
+
+	@Test
+	public void testIncidenciaSincerrar() {
+		Incidencia in =new Incidencia();
+		Empleado em = new Empleado();
+		boolean resultado=in.generarIncidenciaFichajeSinCerrar(em);
+		assertTrue(resultado);
+	}
+
+	@Test
+	public void testCambiarMensaje() {
+		Incidencia in =new Incidencia();
+		boolean resultado=in.cambiarMensaje("71720781L", "Cambio de vacaciones", "Dias libres");
+		assertTrue(resultado);
+	}
+
+	@Test
+	public void testNoCambiarMensaje() {
+		Incidencia in =new Incidencia();
+		boolean resultado=in.cambiarMensaje("717207848P", "C", "Dias libres");
+		assertTrue(!resultado);
+	}
+
+
+	@Test
+	public void ComprobarCambiarContrasenaCadenaBlanco_CadenaExigida() {
+		Empleado empl=new Empleado();
+
+		empl.cambiarContrasena("","mapiaranda@gmail.com","Contrasena1");
+		assertTrue(!empl.getContrasena().equals("Contrasena1"));		
+	}
+
 
 }

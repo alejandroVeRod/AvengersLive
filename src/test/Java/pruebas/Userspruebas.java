@@ -95,6 +95,7 @@ public class Userspruebas {
 	}
 	
 	@Test
+
 	public void testContraseñasIguales() {
 		Empleado empl =new Empleado();
 		assertTrue(empl.contrasenaCoincide("11","11"));
@@ -102,4 +103,29 @@ public class Userspruebas {
 	}
 	
 
-}
+	public void testCreedencialesCorrectasPassGrande() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("12345678","12349999999999999999999999999999999999999"
+				+ "99999999999999999999999999999999999999999999999999"
+				+ "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
+				+ "99999999999999999999999999999999999999999999999");
+		assertTrue(!resultado);
+		
+	}
+
+	
+	@Test 
+	public void testCreedencialesCorrectasCorreoGrande() {
+		Empleado empl =new Empleado();
+		boolean resultado=empl.credencialesCorrectas("1234kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+				+ "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+				+ "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk","Ruben123");
+		assertTrue(!resultado);
+		
+	}
+
+
+
+	}
+
+
