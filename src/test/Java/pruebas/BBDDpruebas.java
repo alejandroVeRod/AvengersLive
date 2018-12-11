@@ -86,7 +86,6 @@ public class BBDDpruebas {
 
 
 	@Test 
-
 	public void testAbrirFichaje() {
 
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
