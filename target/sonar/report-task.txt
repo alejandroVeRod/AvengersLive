@@ -1,7 +1,7 @@
-organization=alejandroverod-github
-projectKey=alejandroVeRod_AvengersLive
+organization=kikoenriko-github
+projectKey=Kikoenriko_AvengersLive
 serverUrl=https://sonarcloud.io
 serverVersion=7.5.0.19741
-dashboardUrl=https://sonarcloud.io/dashboard?id=alejandroVeRod_AvengersLive
-ceTaskId=AWeXzPiC3bMjuFYSFJEx
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeXzPiC3bMjuFYSFJEx
+dashboardUrl=https://sonarcloud.io/dashboard?id=Kikoenriko_AvengersLive
+ceTaskId=AWeYJYdF_dks3zB7O_vz
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeYJYdF_dks3zB7O_vz
