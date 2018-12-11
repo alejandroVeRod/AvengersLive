@@ -11,7 +11,7 @@ import modelo.mongodb.Fichaje;
 public class FichajePruebas {
 
 	@Test 
-	public void testUsuarioRegistrado() {
+	public void testFichajeRegistrado() {
 		Fichaje fic =new Fichaje();
 		boolean resultado=fic.editarFichaje("05980503C", "09","38", "14", "09", "43", "25", "06", "11", "2018", "Cerrado");
 		assertTrue(resultado);
@@ -19,15 +19,7 @@ public class FichajePruebas {
 	}
 	
 	@Test 
-	public void testUsuarioNoRegistrado() {
-		Fichaje fic =new Fichaje();
-		boolean resultado=fic.editarFichaje("05980509P", "0","38", "14", "09", "43", "25", "06", "11", "2018", "Cerrado");
-		assertTrue(!resultado);
-		
-	}
-	
-	@Test 
-	public void testUsuarioNoRegistrados() {
+	public void testFichajeNoRegistrados() {
 		Fichaje fic =new Fichaje();
 		boolean resultado=fic.editarFichaje("05980509P", "0","38", "14", "09", "43", "25", "06", "11", "2018", "Abierto");
 		assertFalse(!resultado);
