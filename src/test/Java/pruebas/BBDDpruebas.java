@@ -37,8 +37,7 @@ public class BBDDpruebas {
 
 	}
 
-
-	@Test 
+	@Test
 
 	public void testInsertarEmpleado() {
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
@@ -52,31 +51,9 @@ public class BBDDpruebas {
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		assertTrue(ite.iterator().hasNext());
 	}
-<<<<<<< HEAD
-	
+
 	@Test
-	public void testAbrirFichaje() {
-
-		MongoCollection<Document> testFichaje = getCollection("Fichajes");
-		Document doc = new Document();
-		doc.append("_id", "02");
-		doc.append("idEmpleado", "02");
-		doc.append("fechaFichaje", "07/11/2018");
-		doc.append("horaEntrada", "23:55:03");
-		doc.append("horaCierre", "23:55:29");
-		doc.append("estado", "Cerrado");
-		DBBroker db = new DBBroker();
-		db.insertarDocumento(testFichaje, doc);
-		FindIterable<Document> ite = testFichaje.find(doc);
-		assertTrue(ite.iterator().hasNext());
-	}
-
-/*	public void testEliminarEmpleado() {
-=======
-
-	@Test 
 	public void testEliminarEmpleado() {
->>>>>>> branch 'E01TestCeleste' of https://github.com/alejandroVeRod/AvengersLive
 
 		MongoCollection<Document> testEmpleado = getCollection("Empleados");
 
@@ -92,16 +69,11 @@ public class BBDDpruebas {
 		db.insertarDocumento(testEmpleado, doc);
 		FindIterable<Document> ite = testEmpleado.find(doc);
 		db.borrarDocumento(testEmpleado, doc);
-		assertFalse(ite.iterator().hasNext());		 
+		assertFalse(ite.iterator().hasNext());
 
-<<<<<<< HEAD
-	}*/
-
-		
-=======
 	}
 
-	@Test 
+	@Test
 	public void testAbrirFichaje() {
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 		Document doc = new Document();
@@ -116,14 +88,9 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 	}
 
-	@Test 
+	@Test
 
 	public void testCerrarFichaje() {
->>>>>>> branch 'E01TestCeleste' of https://github.com/alejandroVeRod/AvengersLive
-
-<<<<<<< HEAD
-		
-=======
 		MongoCollection<Document> testFichaje = getCollection("Fichajes");
 
 		Document doc = new Document("_id", new Document("$regex", "04"));
@@ -133,7 +100,8 @@ public class BBDDpruebas {
 		testFichaje.updateOne(doc, doc2);
 
 	}
-	@Test 
+
+	@Test
 	public void testInsertarIncidencia() {
 
 		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
@@ -151,7 +119,8 @@ public class BBDDpruebas {
 		assertTrue(ite.iterator().hasNext());
 
 	}
-	@Test 
+
+	@Test
 	public void testEliminarIncidencia() {
 
 		MongoCollection<Document> testIncidencia = getCollection("Incidencias");
@@ -168,7 +137,8 @@ public class BBDDpruebas {
 		testIncidencia.deleteOne(doc);
 
 	}
-	@Test 
+
+	@Test
 	public void testResolverIncidencia() {
 
 		MongoCollection<Document> testIncidencias = getCollection("Incidencias");
@@ -180,5 +150,4 @@ public class BBDDpruebas {
 
 	}
 
->>>>>>> branch 'E01TestCeleste' of https://github.com/alejandroVeRod/AvengersLive
 }
