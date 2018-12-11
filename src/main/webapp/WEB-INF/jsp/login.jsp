@@ -360,7 +360,7 @@ header {
 						</div>
 						<div class="group">
 							<label for="pass" class="label" autocomplete="off">Password</label> <input name="inputPassword"
-								type="password" class="input" data-type="password" required autofocus>
+								type="password" autocomplete="off" class="input" data-type="password" required autofocus>
 						</div>
 
 						<div class="group">
