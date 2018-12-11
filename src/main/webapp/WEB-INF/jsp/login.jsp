@@ -352,7 +352,7 @@ header {
 				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
 					for="tab-1" class="tab">LOGIN</label>
 
-				<form action="home.htm" method="post" class="login-form">
+				<form action="home.htm" method="post" class="login-form" autocomplete="off">
 					<div class="sign-in-htm">
 						<div class="group">
 							<label for="user" class="label">Email</label> <input name="inputEmail"
@@ -360,7 +360,7 @@ header {
 						</div>
 						<div class="group">
 							<label for="pass" class="label" autocomplete="off">Password</label> <input name="inputPassword"
-								type="password" autocomplete="off" class="input" data-type="password" required autofocus>
+								type="password"  class="input" data-type="password" required autofocus>
 						</div>
 
 						<div class="group">
