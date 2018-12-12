@@ -30,7 +30,7 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #E6E6E6;
+	background-color: F7F8E0;
 }
 
 
@@ -42,6 +42,7 @@ tr:hover {
 table, td, th {  
   border: 2px solid;
   text-align: left;
+
 }
 
 table {
@@ -50,8 +51,7 @@ table {
 }
 
 th{
-  text-align: center 
-  
+  text-align: center  
 }
 th, td {
   padding: 15px;
@@ -77,7 +77,7 @@ th, td {
 	</p>
 	<p>
 	
-	<div class="centerTable">
+	<div class="centerTable"   bgcolor="#F7F8E0">
 	<form action="consulta.htm" method="post">
   <br>
 		<table>
