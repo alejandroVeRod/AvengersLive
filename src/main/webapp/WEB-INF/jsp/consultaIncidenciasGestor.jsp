@@ -4,7 +4,7 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js">
-	
+  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -36,8 +36,6 @@
 <style>
 html, body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -48,7 +46,7 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 }
 
 
@@ -56,24 +54,40 @@ tr:hover {
 	background-color: #D5D5D5;
 }
 
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
 table {
-	font-size: 15px;
-	width: 100%;
-	padding: 20px;
-	height: 150px;
-	text-align: center;
-	color:black;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
 }
 
 
 
 .boton {
-	width: 100%;
-	background: #c0d6e4;
-	color: black;
-	padding: 20px;
-	font-size: 17px;
-	
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: 1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+
 }
 
 .boton:hover {
@@ -99,10 +113,9 @@ background-color: #c0d6e4;
 }
 
 
-.divCentrado {
-	background-color: rgba(0, 0, 0, 0.8);;
+.divCentrado { 
 	font-size: 14px;
-	border: outset;
+
 	margin: 20px auto 40px auto;
 	height: 300px auto;
 	width: 900px;
@@ -130,7 +143,7 @@ background-color: #c0d6e4;
 	<div class="divCentrado">
 	
 	
-	<h4>*Seleccionar filtros* <span class="dashicons dashicons-arrow-down-alt"></span></h4>
+	<h4><span class="dashicons dashicons-arrow-down-alt"></span></h4>
 	
 	
 	<div class="plegable">
@@ -138,18 +151,15 @@ background-color: #c0d6e4;
 	<form action="filtro.htm" method="post">
 		<p align="center" >
 			<br>
-			DNI 
-			<input type="text" name="filtroDni">
-			Email 
-			<input type="text" name="filtroEmail"> 
-			<br><br> 
+			<input style="display: none" value ="" type="text" name="filtroDni">
+			<input style="display: none" value ="" type="text" name="filtroEmail"> 
+			<br><br>			
 			Fecha Inicio 
-			<input type="text" id="datepickerInicio" name="filtroFechaInicio" onChange="copiar()"> 
+			<input type="text" id="datepickerInicio" name="filtroFechaInicio" onChange="copiar()" placeholder="dd/mm/yy"> 
 			Fecha Fin 
-			<input type="text" name="filtroFechaFin" id="datepickerFin"> 
+			<input type="text" name="filtroFechaFin" id="datepickerFin" placeholder="dd/mm/yy"> 
 			<br><br> 
-			Tipo de Incidencia
-			
+			Tipo de Incidencia			
 			<select name="tipoIncidencia" class="select select:focus">
 				<option></option>
 				<option value="Vacaciones">Solicitar vacaciones</option>
@@ -167,21 +177,19 @@ background-color: #c0d6e4;
 				</select>
 		<br>
 		<br> <input class="btn" type="submit" value="Filtrar">
+		<br></br>
 		</p>
 	</form>
-	</div>
+</div>
 </div>
 
 
 
 <br></br>
-
 	<form name="normal" method="post">
 		<table align="center" border="1" id="tab">
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
-					<th width="30">DNI</th>
-					<th width="30">Email</th>
 					<th width="30">Estado</th>
 					<th width="30">Comentario</th>
 					<th width="30">Fecha Inicio</th>
@@ -192,16 +200,13 @@ background-color: #c0d6e4;
 
 				<c:forEach items="${incidencias}" var="proyecto">
 					<tr>
-
-						<td>${proyecto.idEmpleado}</td>
+						<td style="display: none">${proyecto.idEmpleado}</td>
 						<td style="display: none">${proyecto.tipo}</td>
-						<td>${proyecto.emailEmpleado}</td>
+						<td style="display: none">${proyecto.emailEmpleado}</td>
 						<td>${proyecto.mensaje}</td>
 						<td>${proyecto.comentario}</td>
 						<td>${proyecto.fechaInicio}</td>
 						<td>${proyecto.fechaFin}</td>
-
-
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -211,25 +216,27 @@ background-color: #c0d6e4;
 		<input name="idEmpleado" id="dni" value="" style="display: none">
 		<input name="tipo" id="tip" value="" style="display: none"> 
 		<input name="emailEmpleado" id="email" value="" style="display: none">
-
-		<input name="mensaje" id="mens" value="" style="display: none">
+		
+		<input name="mensaje" id="mens" value="" style="display: none"> 
 		<input name="fechaInicio" id="fechIn" value="" style="display: none">
 		<input name="fechaFin" id="fechFin" value="" style="display: none">
 		<input name="comentario" id="com" value="" style="display: none">
 		<input name="estado" id="est" value="" style="display: none">
 
+
 <br><br> 
 		<p>
-			<input type="submit" value="Consultar" id="consulta"
-				onClick="verIncidencia()" class="boton"></input>
-		</p>
+		<input type="submit" value="Consultar" id="modificar" 
+			onClick="verIncidencia()" class="boton"></input>
 
-	
+		</p>
 
 </div>
 	</form>
-	
 </body>
+
+
+</html>
 
 <script>
 jQuery.fn.animateAuto = function(prop, speed, callback){
@@ -259,8 +266,9 @@ jQuery.fn.animateAuto = function(prop, speed, callback){
 </script>
 
 
+
 <script type="text/javascript">
-	var seleccionado = null; //tendremos la fila necesaria
+	var seleccionado = null; // tendremos la fila necesaria
 	
 	function copiar()
     {
@@ -307,22 +315,12 @@ jQuery.fn.animateAuto = function(prop, speed, callback){
 		document.getElementById("com").value = comentario;
 		document.getElementById("fechIn").value = fechaInicio;
 		document.getElementById("fechFin").value = fechaFin;
-
-		document.normal.action = "Incidencias.htm";
+		document.normal.action = "IncidenciasUsers.htm";
 
 	}
-	
-	function resolverIncidencia(){	
-		var f = seleccionado.getElementsByTagName('td');
-		var dni = f[0].textContent;
-		var comentario = f[3].textContent;
-		document.getElementById("dni").value = dni;
-		document.getElementById("com").value = comentario;
-		document.normal.action = "resolucionIncidencias.htm";
-	}
-	
-	function atras(){
-		document.normal.action="IrHome.htm";
+	function retroceder() {
+
+		document.addTarea.action = "IrHome.htm";
+
 	}
 </script>
-</html>
