@@ -120,6 +120,24 @@ background-color: #c0d6e4;
 	padding: 20px;
 }
 
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
+}
+
 </style>
 
 <jsp:include page="menu.jsp" />
