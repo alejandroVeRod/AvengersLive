@@ -132,12 +132,12 @@ body {
 
 							<input name="est" id="est" value="${est}" style="display: none">
 							<input type="submit" value="ABRIR FICHAJE" id="consulta"
-								onClick="verEstado()" class="btn button:hover button"></input>
+								onClick="verEstado()" class="button"></input>
 
 						</form> </br>
 
 						<form action="cerrarFichaje.htm" method="post" align="center">
-							<input class="btn button:hover button" type="submit"
+							<input class="button" type="submit"
 								id="cerrarFichaje" value="CERRAR FICHAJE" align="center" />
 						</form>
 
