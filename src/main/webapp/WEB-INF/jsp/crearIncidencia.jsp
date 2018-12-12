@@ -198,7 +198,7 @@ body {
 }
 
 .fechas {
-	background-color: #31384A;
+	background-color: #343a40;
 	font-size: 14px;
 	border: outset;
 	margin: 0px auto 0px auto;
