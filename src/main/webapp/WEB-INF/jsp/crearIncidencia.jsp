@@ -7,7 +7,7 @@
 <script src=" https://code.jquery.com/jquery.js">  
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	
 </script>
 <link rel="stylesheet"
@@ -152,10 +152,6 @@ body {
   
 }
 
-.boton:hover {
-	cursor: pointer;
-}
-
 @media ( max-width :480px) {
 	form {
 		width: 100%;
@@ -249,7 +245,7 @@ body {
 			<textarea class="textarea" name="comentario"
 				placeholder="Observaciones" required></textarea>
 
-			<input type="submit" class="boton boton:hover" value="ENVIAR"
+			<input type="submit" class="boton" value="ENVIAR"
 				name="botonEnviar">
 
 		</form>	
