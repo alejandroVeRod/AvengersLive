@@ -11,7 +11,7 @@
   rel="stylesheet" media="screen">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
 
@@ -43,27 +43,25 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #E6E6E6;
+	background-color: #F7F8E0;
 }
 
 
 
 .button {
 	font-family: Arial;
-	color: black;
-	font-size: 40px;
-	padding: 40px;
-	text-decoration: none;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	-webkit-box-shadow: 10px 10px 10px #666666;
-	-moz-box-shadow: 10px 10px 10px #666666;
-	box-shadow: 10px 10px 10px #666666;
-	text-shadow: 0px 1px 3px #666666;
-	border: solid #31384A 14px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#D8D8D8),
-		to(#F2F2F2));
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: 1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 50%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
 
 }
 
@@ -71,11 +69,7 @@ body {
 	background: white;
 }
 
-.button1 {
-  background-color: #D8D8D8 ;
-	width: 250px;
-	height: 100px;
-}
+
 
 .divFichajes {
 	background-color: rgba(0, 0, 0, 0.8);;
