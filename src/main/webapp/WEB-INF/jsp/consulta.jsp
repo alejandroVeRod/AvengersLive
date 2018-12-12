@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src=" https://code.jquery.com/jquery.js">	
+<script src=" https://code.jquery.com/jquery.js">  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -19,8 +19,7 @@
 <style>
 html, body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+	
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -31,7 +30,7 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: F7F8E0;
 }
 
 
@@ -39,12 +38,23 @@ tr:hover {
 	background-color: #D5D5D5;
 }
 
+
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
 table {
-	font-size: 15px;
-	width: 50%;
-	height: 150px;
-	text-align: center;
-	border: 3px solid black;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
 }
 
 
@@ -67,10 +77,11 @@ table {
 	</p>
 	<p>
 	
-	<div class="centerTable">
+	<div class="centerTable"   bgcolor="#F7F8E0">
 	<form action="consulta.htm" method="post">
+  <br>
 		<table>
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
 					<th>Fecha</th>
 					<th>Apertura</th>

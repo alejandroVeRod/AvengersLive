@@ -43,9 +43,9 @@
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> Fichajes</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="IrHome.htm">Abrir/Cerrar fichajes<span
+						<a class="dropdown-item" href="IrHome.htm">Abrir/Cerrar Fichajes<span
 							class="sr-only">(current)</span></a> <a class="dropdown-item"
-							href="consulta.htm">Consultar fichajes</a>
+							href="consulta.htm">Consultar Fichajes</a>
 						<!-- <div class="dropdown-divider"></div> -->
 					</div></li>
 				<li class="nav-item dropdown"><a
