@@ -98,8 +98,6 @@ header {
 	line-height: 80px;
 	position: relative;
 	top: 0;
-	transition: all 0.5s ease;
-	box-shadow: 0px 2px 10px #fff inset;
 }
 
 .container {
