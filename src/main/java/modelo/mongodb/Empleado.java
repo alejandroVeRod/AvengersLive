@@ -1,10 +1,12 @@
 package modelo.mongodb;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bson.Document;
+import org.springframework.security.core.userdetails.UserDetails;
 
 public class Empleado {
 
@@ -21,6 +23,8 @@ public class Empleado {
 		this.contrasena = contrasena;
 		this.nombre = dao.nombreEmpleado(email);
 		this.rol = dao.rolEmpleado(email);
+
+
 	}
 
 	//Constructor para dar de alta un usuario
@@ -43,10 +47,16 @@ public class Empleado {
 
 	public boolean credencialesCorrectas(String emailEmpleado, String contrasenaIntroducida) {
 		String contrasenaReal = dao.contrasenaDeEmpleado(emailEmpleado);
-		if(contrasenaReal.equals(contrasenaIntroducida))
-			return true;    	
+		
+		if(contrasenaReal.equals(contrasenaIntroducida)) {
+			
+			return true;   
+		}
 
 		return false;
+	}
+	public void sendToken(String Token) {
+		dao.saveToken(Token);
 	}
 	public String rolEmpleado(String emailEmpleado) {
 		return dao.rolEmpleado(emailEmpleado);

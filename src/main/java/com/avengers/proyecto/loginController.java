@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bson.Document;
@@ -22,6 +23,7 @@ import org.springframework.web.servlet.ModelAndView;
 import modelo.mongodb.Empleado;
 import modelo.mongodb.Fichaje;
 import modelo.mongodb.Incidencia;
+import modelo.mongodb.TokenUtil;
 
 @Controller
 public class loginController {
@@ -35,6 +37,9 @@ public class loginController {
 	String mail;
 	Incidencia inc;
 	String mensaje;
+	String token;
+
+	
 
 	@RequestMapping("login.htm")
 	public ModelAndView redireccion() {
@@ -64,16 +69,27 @@ public class loginController {
 	// else return new ModelAndView("admin");
 	// }
 
+	public void sendToken(String Token) {
+
+		empleado.sendToken(Token);
+		
+	}
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
+		
 		String email = null;
 		String contrasena = null;
 		String estado = null;
 		Document fich = null;
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
+		Document emp=new Document();
+		emp.append("email", email);
+		emp.append("contrasena", contrasena);
+		emp.append("ip", request.getRemoteAddr());
+		request.getSession().setAttribute("token", TokenUtil.createToken(emp));
+
 		List<Document> listaFichajes = new ArrayList<Document>();
-		System.out.println(contrasena);
 		if (empleado.credencialesCorrectas(email, contrasena)) {
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());

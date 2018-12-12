@@ -13,12 +13,18 @@ public class DAOEmpleado {
 
 	private DBBroker db;
 	private MongoCollection<Document> coleccion;
-
+	private MongoCollection<Document> Tokens;
 	public DAOEmpleado() {
 		db = new DBBroker();
 		coleccion = db.devolverColeccion("Empleados");
+		Tokens = db.devolverColeccion("Tokens");
 	}
-
+	/*
+	 * TOKEN
+	 */
+	public void saveToken(String Token) {
+		 db.insertarDocumento(Tokens,new Document().append("token", Token));
+	}
 	public String contrasenaDeEmpleado(String emailEmpleado) {
 		Document documentoEmail = null;
 		String contrasenaEmpleado = "";
