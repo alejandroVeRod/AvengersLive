@@ -1,6 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
 
 <link href="src/main/webapp/WEB-INF/css/bootstrap.min.css"
-	rel="stylesheet" media="screen">
+  rel="stylesheet" media="screen">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,8 +33,6 @@
 <style>
 body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -45,7 +43,7 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #E6E6E6;
 }
 
 
@@ -64,9 +62,9 @@ body {
 	box-shadow: 10px 10px 10px #666666;
 	text-shadow: 0px 1px 3px #666666;
 	border: solid #31384A 14px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#517499),
-		to(#a4b8eb));
-	background: -moz-linear-gradient(top, #517499, #a4b8eb);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#D8D8D8),
+		to(#F2F2F2));
+
 }
 
 .button:hover {
@@ -74,9 +72,7 @@ body {
 }
 
 .button1 {
-	background-image:
-		url(https://st.depositphotos.com/2546551/4088/i/950/depositphotos_40887211-stock-photo-wood-floor-surface-parquet-wall.jpg);
-	color: black;
+  background-color: #D8D8D8 ;
 	width: 250px;
 	height: 100px;
 }
@@ -100,8 +96,7 @@ body {
 	-moz-border-radius: 0px 0px 0px 0px;
 	-webkit-border-radius: 0px 0px 0px 0px;
 	height: 120px;
-	background-image:
-		url(https://st.depositphotos.com/2546551/4088/i/950/depositphotos_40887211-stock-photo-wood-floor-surface-parquet-wall.jpg);
+
 		width: 100%;
 
 	position: relative;
@@ -127,7 +122,7 @@ body {
 	<div>
 
 		<div class="cabecera">
-			<h1 align="center">Bienvenido a AvengersLive Web</h1>
+			<h1 align="center">Gestor de Fichajes</h1>
 		</div>
 
 		</br>
