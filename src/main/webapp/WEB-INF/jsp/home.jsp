@@ -50,16 +50,14 @@ body {
 
 .button {
 	font-family: Arial;
-	color: black;
-	font-size: 40px;
-  padding: 19px 39px 18px 39px;
-  color: #FFF;
+  	padding: 19px 39px 18px 39px;
+	color: #FFF;
 	background-color: 1161ee;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	border-radius: 5px;
-	width: 50%;
+	width: 25%;
 	border: 2px solid #08088A;
 	border-width: 1px 1px 3px;
 	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
