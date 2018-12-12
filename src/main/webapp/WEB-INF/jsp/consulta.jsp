@@ -81,7 +81,7 @@ th, td {
 	<form action="consulta.htm" method="post">
   <br>
 		<table>
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
 					<th>Fecha</th>
 					<th>Apertura</th>
