@@ -4,7 +4,7 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js">
-	
+  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -36,8 +36,6 @@
 <style>
 html, body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -48,7 +46,7 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 }
 
 
@@ -68,11 +66,18 @@ table {
 
 
 .boton {
-	width: 100%;
-	background: #c0d6e4;
-	color: black;
-	padding: 20px;
-	font-size: 17px;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: 1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
 	
 }
 
@@ -98,11 +103,13 @@ background-color: #c0d6e4;
 	cursor: pointer;
 }
 
+h4{
+  color: black;
+  }
+
 
 .divCentrado {
-	background-color: rgba(0, 0, 0, 0.8);;
 	font-size: 14px;
-	border: outset;
 	margin: 20px auto 40px auto;
 	height: 300px auto;
 	width: 900px;
@@ -178,7 +185,7 @@ background-color: #c0d6e4;
 
 	<form name="normal" method="post">
 		<table align="center" border="1" id="tab">
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
 					<th width="30">DNI</th>
 					<th width="30">Email</th>
@@ -188,7 +195,7 @@ background-color: #c0d6e4;
 					<th width="30">Fecha Fin</th>
 				</tr>
 			</thead>
-			<tbody bgcolor="#f5f5f5">
+			<tbody bgcolor="#f5f5f">
 
 				<c:forEach items="${incidencias}" var="proyecto">
 					<tr>
