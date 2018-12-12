@@ -7,7 +7,7 @@
   
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	
 </script>
 <link rel="stylesheet"
@@ -94,7 +94,7 @@ header {
 	width: 100%;
 	height: 80px;
 	color: #fff;
-	background: #0B3861;
+	background: #343a40;
 	line-height: 80px;
 	position: relative;
 	top: 0;
@@ -175,7 +175,7 @@ header {
 }
 
 .a {
-	color: inherit;
+	color: #fffff;
 	text-decoration: none
 }
 
@@ -194,7 +194,7 @@ header {
 	height: 100%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
-	background: rgba(40, 57, 101, .9);
+	background: #343a40;
 }
 
 .login-html .sign-in, .login-html .sign-up, .login-form .group .check {
