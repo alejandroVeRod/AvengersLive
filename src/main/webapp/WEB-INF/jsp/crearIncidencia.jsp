@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>Crear incidencia</title>
-<script src=" https://code.jquery.com/jquery.js">	
+<script src=" https://code.jquery.com/jquery.js">  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -79,8 +79,7 @@
 <style>
 body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -91,7 +90,7 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 	font-family: helvetica;
 }
 	
@@ -136,11 +135,21 @@ body {
 }
 
 .boton {
-	width: 100%;
-	background: #31384A;
-	color: #fff;
-	padding: 20px;
-	font-size: 17px;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: 1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+  margin-top:20px;
+  position: relative;
+  
 }
 
 .boton:hover {
@@ -154,7 +163,7 @@ body {
 }
 
 .caja {
-	margin: 20px auto 40px auto;
+	margin: 20px auto 0px auto;
 	border: 1px solid #d9d9d9;
 	height: 30px;
 	overflow: hidden;
@@ -182,7 +191,6 @@ body {
 	text-align: center;
 	width: 30px;
 	height: 30px;
-	background-color: #31384A;
 	position: absolute;
 	top: 0;
 	right: 0px;
@@ -193,7 +201,7 @@ body {
 	background-color: #31384A;
 	font-size: 14px;
 	border: outset;
-	margin: 20px auto 40px auto;
+	margin: 0px auto 0px auto;
 	height: 200px;
 	width: 500px;
 	overflow: hidden;
