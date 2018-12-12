@@ -46,11 +46,12 @@ table, td, th {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 40%;
 }
 
 th{
   text-align: center 
+  
 }
 th, td {
   padding: 15px;
@@ -78,6 +79,7 @@ th, td {
 	
 	<div class="centerTable">
 	<form action="consulta.htm" method="post">
+  <br>
 		<table>
 			<thead bgcolor="#c0d6e4">
 				<tr>
