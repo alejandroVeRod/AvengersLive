@@ -67,7 +67,7 @@ public class FichajePruebas {
 	public void comprobarCierre() {
 		
 		Fichaje fichaje =new Fichaje();
-		assertTrue(fichaje.comprobarCierre("05980503C", "11/12/2018", "Cerrado"));
+		assertTrue(fichaje.comprobarCierre("05980925M", "12/12/2018", "Cerrado"));
 	
 	}
 
