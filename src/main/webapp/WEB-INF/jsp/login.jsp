@@ -320,7 +320,7 @@ header {
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<div id="logo">In Time App</div>
+					<div id="logo">In Time</div>
 
 				</div>
 			</header>
