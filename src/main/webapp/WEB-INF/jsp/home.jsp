@@ -51,7 +51,7 @@ body {
 .button {
 	font-family: Arial;
   	padding: 19px 39px 18px 39px;
-	background-color: 1161ee;
+	background-color: #1161ee;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
