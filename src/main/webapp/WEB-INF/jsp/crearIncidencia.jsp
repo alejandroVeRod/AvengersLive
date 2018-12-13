@@ -8,10 +8,10 @@
 </script>
 <script
   src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-	
+  
 </script>
 <link rel="stylesheet"
-	href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <meta http-equiv="content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/estilos.css">
 
@@ -123,7 +123,7 @@ body {
 }
 
 .textarea {
-	width: 100%;
+	width: 50%;
 	margin-botton: 20px;
 	padding: 2px;
 	box-sizing: border-box;
@@ -132,6 +132,7 @@ body {
 	min-height: 100px;
 	max-height: 200px;
 	max-width: 100%;
+  background-color:#D8D8D8
 }
 
 .boton {
@@ -170,9 +171,9 @@ body {
 .select {
 	background: white;
 	border: outset;
-	font-size: 14px;
-	height: 30px;
-	padding: 5px;
+	font-size: 15px;
+	height: 50px;
+	padding-bottom: 20px;
 	width: 250px;
 }
 
