@@ -7,7 +7,7 @@
   
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	
 </script>
 <link rel="stylesheet"
@@ -105,9 +105,8 @@ background-color: #c0d6e4;
 
 
 .divCentrado {
-	background-color: rgba(0, 0, 0, 0.8);;
 	font-size: 14px;
-	border: outset;
+
 	margin: 20px auto 40px auto;
 	height: 300px auto;
 	width: 900px;
@@ -153,7 +152,6 @@ th, td {
 	<div class="divCentrado">
 	
 	
-	<h4>*Seleccionar filtros* <span class="dashicons dashicons-arrow-down-alt"></span></h4>
 	
 	
 	<div class="plegable">
