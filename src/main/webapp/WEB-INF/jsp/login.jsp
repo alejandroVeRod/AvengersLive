@@ -8,7 +8,7 @@
 </script>
 <script
   src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-	
+  
 </script>
 <link rel="stylesheet"
 	href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -240,7 +240,8 @@ header {
 	border: none;
 	padding: 15px 20px;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, .1);
+	background: #D8D8D8;
+
 }
 
 .login-form .group input[data-type="password"] {
@@ -356,8 +357,8 @@ header {
 						<div class="hr"></div>
 						
 					</div>
-<div>
-				<ul color: #FFFFFF;>
+      <div>
+				<ul style="color:#FF0000";>
 					<c:out value=" ${error}" />
 				</ul>
 			</div>
