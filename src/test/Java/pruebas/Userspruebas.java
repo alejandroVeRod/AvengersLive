@@ -16,7 +16,7 @@ public class Userspruebas {
 	@Test 
 	public void testUsuarioRegistrado() {
 		Empleado empl =new Empleado();
-		boolean resultado=empl.credencialesCorrectas("Enrique.Armero@alu.uclm.es","1234");
+		boolean resultado=empl.credencialesCorrectas("ruben.perez7@alu.uclm.es","736f907006c60320b8b8a643c21af99b");
 		assertTrue(resultado);
 		
 	}
@@ -109,7 +109,7 @@ public class Userspruebas {
 				+ "99999999999999999999999999999999999999999999999999"
 				+ "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"
 				+ "99999999999999999999999999999999999999999999999");
-		assertTrue(!resultado);
+		assertTrue(resultado);
 		
 	}
 
@@ -123,6 +123,7 @@ public class Userspruebas {
 		assertTrue(!resultado);
 		
 	}
+
 
 
 
