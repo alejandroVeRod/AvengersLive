@@ -5,7 +5,7 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js ">
-	
+  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -59,7 +59,7 @@
 
 .login-html {
 	width: 100%;
-	height: 100%;
+	height: 110%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
 	background: #343a40;
@@ -180,7 +180,7 @@
 
 <body>
 <br></br>
-	<div style="background: #1161ee; background-color: transparent">
+  <div style="background: #1161ee; background-color: transparent">
 		<p></p>
 
 		<!-- LOGIN -->
@@ -190,14 +190,6 @@
 					for="tab-1" class="tab">Cambio de contraseña</label>
 
 				<p align="left" >
-				<li type="disc" align="center" style="color:white">Introduzca la contraseña actual</li>
-				<li type="disc" align="center" style="color:white">Introduzca la nueva contraseña.
-					Esta debe contener al menos 8 caracteres con una mayúscula, una
-					minúscula y un número</li>
-				<li type="disc" align="center" style="color:white">Vuelva a introducir la nueva
-					contraseña</li>
-
-
 
 				</p>
 
@@ -205,14 +197,23 @@
 					class="login-form">
 					<div class="sign-in-htm">
 						<div class="group">
-
+  			<li type="disc" align="center" style="color:white">Introduzca la contraseña actual</li>
+              <br>
 							<input type="password" class="input" name="inputContrasena" autocomplete="off"
 								placeholder="Contraseña actual" required autofocus> 
 								<br>
-								<input
+                <li type="disc" align="center" style="color:white">Introduzca la nueva contraseña.
+				      	Esta debe contener al menos 8 caracteres con una mayúscula, una
+					      minúscula y un número</li>
+								<br>
+                <input
 								type="password" class="input" name="inputContrasenaNueva1" autocomplete="off"
 								placeholder="Nueva contraseña" required> 
 								<br>
+                    
+      			<li type="disc" align="center" style="color:white">Vuelva a introducir la nueva
+    					contraseña</li>
+              <br>
 								<input
 								type="password" class="input" name="inputContrasenaNueva2" autocomplete="off"
 								placeholder="Repetir nueva contraseña" required>
@@ -224,12 +225,17 @@
 						</div>
 					</div>
 					<h4 align="center">
-			
-						<c:out value="${mensaje}" />
+			<br>
+        <ul style="color:#FF0000";>
+				  	<c:out value="${mensaje}" />
+				</ul>
+        
+				
 					</h4>
 				</form>
 				
 				<div class="foot-lnk">
+        <br>
 							<a href="IrHome.htm">Volver al inicio</a>
 				</div>
 			</div>
