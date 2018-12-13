@@ -54,30 +54,21 @@ tr:hover {
 	background-color: #D5D5D5;
 }
 
-table, td, th {  
-  border: 2px solid;
-  text-align: left;
-
-}
-
 table {
-  border-collapse: collapse;
-  width: 40%;
-}
-
-th{
-  text-align: center  
-}
-th, td {
-  padding: 15px;
+	font-size: 15px;
+	width: 100%;
+	padding: 20px;
+	height: 150px;
+	text-align: center;
+	color:black;
 }
 
 
 
 .boton {
   padding: 19px 39px 18px 39px;
-  color: #FFF;
-	background-color: 1161ee;
+	color: #FFF;
+	background-color: #1161ee;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
@@ -87,7 +78,7 @@ th, td {
 	border-width: 1px 1px 3px;
 	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
 	margin-bottom: 10px;
-
+	
 }
 
 .boton:hover {
@@ -113,9 +104,10 @@ background-color: #c0d6e4;
 }
 
 
-.divCentrado { 
+.divCentrado {
+	background-color: rgba(0, 0, 0, 0.8);;
 	font-size: 14px;
-
+	border: outset;
 	margin: 20px auto 40px auto;
 	height: 300px auto;
 	width: 900px;
@@ -124,6 +116,24 @@ background-color: #c0d6e4;
 	color: white;
 	text-align: center;
 	padding: 20px;
+}
+
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
 }
 
 </style>
@@ -143,7 +153,7 @@ background-color: #c0d6e4;
 	<div class="divCentrado">
 	
 	
-	<h4><span class="dashicons dashicons-arrow-down-alt"></span></h4>
+	<h4>*Seleccionar filtros* <span class="dashicons dashicons-arrow-down-alt"></span></h4>
 	
 	
 	<div class="plegable">
@@ -151,15 +161,18 @@ background-color: #c0d6e4;
 	<form action="filtro.htm" method="post">
 		<p align="center" >
 			<br>
-			<input style="display: none" value ="" type="text" name="filtroDni">
-			<input style="display: none" value ="" type="text" name="filtroEmail"> 
-			<br><br>			
-			Fecha Inicio 
-			<input type="text" id="datepickerInicio" name="filtroFechaInicio" onChange="copiar()" placeholder="dd/mm/yy"> 
-			Fecha Fin 
-			<input type="text" name="filtroFechaFin" id="datepickerFin" placeholder="dd/mm/yy"> 
+			DNI 
+			<input type="text" name="filtroDni">
+			Email 
+			<input type="text" name="filtroEmail"> 
 			<br><br> 
-			Tipo de Incidencia			
+			Fecha Inicio 
+			<input type="text" id="datepickerInicio" name="filtroFechaInicio" onChange="copiar()"> 
+			Fecha Fin 
+			<input type="text" name="filtroFechaFin" id="datepickerFin"> 
+			<br><br> 
+			Tipo de Incidencia
+			
 			<select name="tipoIncidencia" class="select select:focus">
 				<option></option>
 				<option value="Vacaciones">Solicitar vacaciones</option>
@@ -177,19 +190,21 @@ background-color: #c0d6e4;
 				</select>
 		<br>
 		<br> <input class="btn" type="submit" value="Filtrar">
-		<br></br>
 		</p>
 	</form>
-</div>
+	</div>
 </div>
 
 
 
 <br></br>
+
 	<form name="normal" method="post">
 		<table align="center" border="1" id="tab">
 			<thead bgcolor="#428bca">
 				<tr>
+					<th width="30">DNI</th>
+					<th width="30">Email</th>
 					<th width="30">Estado</th>
 					<th width="30">Comentario</th>
 					<th width="30">Fecha Inicio</th>
@@ -200,13 +215,16 @@ background-color: #c0d6e4;
 
 				<c:forEach items="${incidencias}" var="proyecto">
 					<tr>
-						<td style="display: none">${proyecto.idEmpleado}</td>
+
+						<td>${proyecto.idEmpleado}</td>
 						<td style="display: none">${proyecto.tipo}</td>
-						<td style="display: none">${proyecto.emailEmpleado}</td>
+						<td>${proyecto.emailEmpleado}</td>
 						<td>${proyecto.mensaje}</td>
 						<td>${proyecto.comentario}</td>
 						<td>${proyecto.fechaInicio}</td>
 						<td>${proyecto.fechaFin}</td>
+
+
 					</tr>
 				</c:forEach>
 			</tbody>
@@ -216,27 +234,25 @@ background-color: #c0d6e4;
 		<input name="idEmpleado" id="dni" value="" style="display: none">
 		<input name="tipo" id="tip" value="" style="display: none"> 
 		<input name="emailEmpleado" id="email" value="" style="display: none">
-		
-		<input name="mensaje" id="mens" value="" style="display: none"> 
+
+		<input name="mensaje" id="mens" value="" style="display: none">
 		<input name="fechaInicio" id="fechIn" value="" style="display: none">
 		<input name="fechaFin" id="fechFin" value="" style="display: none">
 		<input name="comentario" id="com" value="" style="display: none">
 		<input name="estado" id="est" value="" style="display: none">
 
-
 <br><br> 
 		<p>
-		<input type="submit" value="Consultar" id="modificar" 
-			onClick="verIncidencia()" class="boton"></input>
-
+			<input type="submit" value="Consultar" id="consulta"
+				onClick="verIncidencia()" class="boton"></input>
 		</p>
+
+	
 
 </div>
 	</form>
+	
 </body>
-
-
-</html>
 
 <script>
 jQuery.fn.animateAuto = function(prop, speed, callback){
@@ -266,9 +282,8 @@ jQuery.fn.animateAuto = function(prop, speed, callback){
 </script>
 
 
-
 <script type="text/javascript">
-	var seleccionado = null; // tendremos la fila necesaria
+	var seleccionado = null; //tendremos la fila necesaria
 	
 	function copiar()
     {
@@ -315,12 +330,22 @@ jQuery.fn.animateAuto = function(prop, speed, callback){
 		document.getElementById("com").value = comentario;
 		document.getElementById("fechIn").value = fechaInicio;
 		document.getElementById("fechFin").value = fechaFin;
-		document.normal.action = "IncidenciasUsers.htm";
+
+		document.normal.action = "Incidencias.htm";
 
 	}
-	function retroceder() {
-
-		document.addTarea.action = "IrHome.htm";
-
+	
+	function resolverIncidencia(){	
+		var f = seleccionado.getElementsByTagName('td');
+		var dni = f[0].textContent;
+		var comentario = f[3].textContent;
+		document.getElementById("dni").value = dni;
+		document.getElementById("com").value = comentario;
+		document.normal.action = "resolucionIncidencias.htm";
+	}
+	
+	function atras(){
+		document.normal.action="IrHome.htm";
 	}
 </script>
+</html>

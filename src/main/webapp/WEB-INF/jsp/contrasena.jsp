@@ -1,6 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
 .body {
 	margin: 0;
 	color: #6a6f8c;
-	background: #c8c8c8;
+	background: #F7F8E0;
 }
 
 *, :after, :before {
@@ -52,8 +52,6 @@
 	max-width: 525px;
 	min-height: 670px;
 	position: relative;
-	background:
-		url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
 		no-repeat center;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0
 		rgba(0, 0, 0, .19);
@@ -64,7 +62,7 @@
 	height: 100%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
-	background: rgba(40, 57, 101, .9);
+	background: #343a40;
 }
 
 .login-html .sign-in, .login-html .sign-up, .login-form .group .check {
@@ -226,7 +224,7 @@
 						</div>
 					</div>
 					<h4 align="center">
-						Estado:
+			
 						<c:out value="${mensaje}" />
 					</h4>
 				</form>

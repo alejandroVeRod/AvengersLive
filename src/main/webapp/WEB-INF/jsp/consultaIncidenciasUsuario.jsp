@@ -4,7 +4,7 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js">
-	
+  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -36,8 +36,7 @@
 <style>
 html, body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -48,7 +47,7 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 }
 
 
@@ -68,12 +67,18 @@ table {
 
 
 .boton {
-	width: 100%;
-	background: #c0d6e4;
-	color: black;
-	padding: 20px;
-	font-size: 17px;
-	
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
 }
 
 .boton:hover {
@@ -111,6 +116,24 @@ background-color: #c0d6e4;
 	color: white;
 	text-align: center;
 	padding: 20px;
+}
+
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
 }
 
 </style>
@@ -175,7 +198,7 @@ background-color: #c0d6e4;
 <br></br>
 	<form name="normal" method="post">
 		<table align="center" border="1" id="tab">
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
 					<th width="30">Estado</th>
 					<th width="30">comentario</th>
