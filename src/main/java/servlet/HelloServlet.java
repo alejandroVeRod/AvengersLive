@@ -18,29 +18,12 @@ public class HelloServlet extends HttpServlet{
 	@Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-		try {
+
 		ServletOutputStream out = resp.getOutputStream();
 
-		try {
 	     out.write("hello heroku".getBytes());  
-		} catch(UnknownHostException uhex) {
-			System.out.println("Servlet exception");
-		}
-		try {
-		     out.flush();
-		} catch(UnknownHostException uhex) {
-			System.out.println("Servlet exception");
-		}
-
-		try {
+		 out.flush();
 	     out.close();
-		}catch(UnknownHostException uhex) {
-				System.out.println("Servlet exception");
-			}
-	     
-		} catch(UnknownHostException uhex) {
-			System.out.println("Servlet exception");
-		}
 
 	}   
 }
