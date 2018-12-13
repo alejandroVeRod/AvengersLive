@@ -5,7 +5,7 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js ">
-	
+  
 </script>
 <script type="text/javascript"
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -30,7 +30,7 @@ body {
 
 .form {
 	width: 340px;
-	height: 440px;
+	height: 500px;
 	background: #ffffff;
 	border-radius: 8px;
 	box-shadow: 0 0 40px -10px #000;
@@ -94,10 +94,6 @@ button {
 
 }
 
-button:hover {
-	background: #78788c;
-	color: #fff
-}
 </style>
 
 <body>
@@ -116,9 +112,9 @@ button:hover {
 			placeholder="Nombre y apellidos del empleado" required></input>
 	</p>
 	<p type="Rol:">
-		<input id="rol" type="radio" name="rol" value="usuario">Usuario 
-		<input id="rol" type="radio" name="rol" value="administrador">Administrador 
-		<input id="rol" type="radio" name="rol" value="gestor">Gestor
+		<input id="rol" type="radio" name="rol" value="usuario">Usuario <br/>
+		<input id="rol" type="radio" name="rol" value="administrador">Administrador <br/>
+		<input id="rol" type="radio" name="rol" value="gestor">Gestor <br/>
 	</p>
 	
 	<br>
