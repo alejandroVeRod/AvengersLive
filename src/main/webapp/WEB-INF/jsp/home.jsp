@@ -57,7 +57,7 @@ body {
 	text-align: center;
 	font-style: normal;
 	border-radius: 5px;
-	width: 25%;
+	width: 50%;
 	border: 2px solid #08088A;
 	border-width: 1px 1px 3px;
 	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
