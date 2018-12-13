@@ -123,7 +123,7 @@ body {
 }
 
 .textarea {
-	width: 50%;
+	width: 100%;
 	margin-botton: 20px;
 	padding: 2px;
 	box-sizing: border-box;
