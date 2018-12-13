@@ -51,7 +51,7 @@ body {
   
     padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: 1161ee;
+  background-color: #1161ee;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
