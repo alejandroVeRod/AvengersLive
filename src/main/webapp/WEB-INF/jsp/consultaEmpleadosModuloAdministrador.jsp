@@ -7,7 +7,7 @@
   
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	
 </script>
 <link rel="stylesheet"
@@ -75,6 +75,24 @@ table {
 .centerTable table {
        margin: 0 auto;
        text-align: left;
+}
+
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
 }
 
 </style>
