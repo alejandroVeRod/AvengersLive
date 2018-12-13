@@ -358,7 +358,7 @@ header {
 						
 					</div>
       <div>
-				<ul color: ##FF0000;>
+				<ul style="color:#FF0000";>
 					<c:out value=" ${error}" />
 				</ul>
 			</div>
