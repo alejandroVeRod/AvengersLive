@@ -108,10 +108,11 @@ public class Empleado {
 			return false;
 		emailDestino = emailEmpleado(emailDni);
 		try{
-			if(!emailDestino.equals(null))
-				destinatario = emailDestino;
-			else
+			if(emailDestino==null)
 				destinatario = emailDni;
+			else
+				destinatario = emailDestino;
+				
 		}catch(Exception e) {
 			destinatario = emailDni;
 		}
