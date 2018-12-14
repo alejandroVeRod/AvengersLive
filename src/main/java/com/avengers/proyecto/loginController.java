@@ -35,6 +35,9 @@ public class loginController {
 	String mail;
 	Incidencia inc;
 	String mensaje;
+	
+	private static String HOURFORMAT="HH:mm:ss";
+	private static String DATEFORMAT="dd/MM/yyyy";
 
 	@RequestMapping("login.htm")
 	public ModelAndView redireccion() {
@@ -48,10 +51,11 @@ public class loginController {
 		String email = null;
 		String contrasena = null;
 		String estado = null;
-		Document fich = new Document();
+		Document fich;
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
 		if (empleado.credencialesCorrectas(email, contrasena)) {
+			fich=new Document();
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
 			if (!listaFichajes.isEmpty()) {
@@ -103,8 +107,8 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.POST, value = "abrirFichaje.htm")
 	public ModelAndView abrirFichaje(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
-		DateFormat hora = new SimpleDateFormat("HH:mm:ss");
-		DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy");
+		DateFormat hora = new SimpleDateFormat(HOURFORMAT);
+		DateFormat fecha = new SimpleDateFormat(DATEFORMAT);
 		model.addAttribute("email", empleado.getEmail());
 		fichaje = new Fichaje(empleado.getDni(), fecha.format(new Date()), hora.format(new Date()));
 		model.addAttribute("estado", fichaje.getEstado());
