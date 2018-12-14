@@ -1,11 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 <!DOCTYPE html>
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js ">
-	
+  
 </script>
 <script type="text/javascript"
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -22,7 +22,7 @@
 
 
 body {
-	background: #59ABE3;
+	background: #F7F8E0;
 	margin: 0
 }
 
@@ -30,7 +30,7 @@ body {
 
 .form {
 	width: 340px;
-	height: 440px;
+	height: 500px;
 	background: #ffffff;
 	border-radius: 8px;
 	box-shadow: 0 0 40px -10px #000;
@@ -46,8 +46,8 @@ h2 {
 	margin: 10px 0;
 	padding-bottom: 10px;
 	width: 180px;
-	color: #78788c;
-	border-bottom: 3px solid #78788c
+	color: #000000;
+	border-bottom: 3px solid #428bca
 }
 
 input {
@@ -60,7 +60,7 @@ input {
 	border: 0;
 	font-family: 'Montserrat', sans-serif;
 	transition: all .3s;
-	border-bottom: 2px solid #bebed2
+	border-bottom: 2px solid #428bca
 }
 
 input:focus {
@@ -76,21 +76,24 @@ p:before {
 }
 
 button {
-	float: right;
-	padding: 8px 12px;
-	margin: 8px 0 0;
-	font-family: 'Montserrat', sans-serif;
-	border: 2px solid #78788c;
-	background: #78788c;
-	color: #5a5a6e;
-	cursor: pointer;
-	transition: all .3s
+  padding: 19px 39px 20px 50px;
+  color: #FFF;
+	background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 40%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 200px;
+  position: relative;
+
 }
 
-button:hover {
-	background: #78788c;
-	color: #fff
-}
 </style>
 
 <body>
@@ -109,9 +112,9 @@ button:hover {
 			placeholder="Nombre y apellidos del empleado" required></input>
 	</p>
 	<p type="Rol:">
-		<input id="rol" type="radio" name="rol" value="usuario">Usuario 
-		<input id="rol" type="radio" name="rol" value="administrador">Administrador 
-		<input id="rol" type="radio" name="rol" value="gestor">Gestor
+		<input id="rol" type="radio" name="rol" value="usuario">Usuario <br/>
+		<input id="rol" type="radio" name="rol" value="administrador">Administrador <br/>
+		<input id="rol" type="radio" name="rol" value="gestor">Gestor <br/>
 	</p>
 	
 	<br>
@@ -144,8 +147,6 @@ button:hover {
 		
 		
 	}
-
-
 
 </script>
 </html>

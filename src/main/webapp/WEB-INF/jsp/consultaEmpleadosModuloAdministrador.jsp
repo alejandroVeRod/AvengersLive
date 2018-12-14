@@ -4,10 +4,10 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js">
-	
+  
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
 	
 </script>
 <link rel="stylesheet"
@@ -28,8 +28,6 @@
 
 html, body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -40,24 +38,23 @@ html, body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 }
 
 .boton-personalizado {
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 20px;
-	color: black;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 40px;
-	padding-right: 40px;
-	background-color: #c0d6e4;
-	border-color: black;
-	border-width: 3px;
-	border-style: solid;
-	border-radius: 35px;
-	width: 200px;
+  padding: 19px 39px 18px 39px;
+	color: #FFF;
+	background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+
 }
 
 table {
@@ -80,6 +77,24 @@ table {
        text-align: left;
 }
 
+table, td, th {  
+  border: 2px solid;
+  text-align: left;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th{
+  text-align: center  
+}
+th, td {
+  padding: 15px;
+}
+
 </style>
 <jsp:include page="menu.jsp" />
 <body>
@@ -90,7 +105,7 @@ table {
 	<div class="centerTable">
 	<form name="normal" method="post">
 		<table align="center" border="1" id="table">
-			<thead bgcolor="#c0d6e4">
+			<thead bgcolor="#428bca">
 				<tr>
 					<th width="30">DNI</th>
 					<th width="30">Email</th>

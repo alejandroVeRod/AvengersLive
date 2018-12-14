@@ -1,6 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 
 
 <!DOCTYPE html>
@@ -32,9 +32,7 @@
 </head>
 <style>
 body {
-	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+  /* Aquí el origen de la imagen */
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -45,24 +43,44 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #E6E6E6;
+}
+
+
+.boton-personalizadodivarriba{
+  
+    padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 40%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+ 
+
 }
 
 .boton-personalizado {
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 15px;
-	color: black;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 40px;
-	padding-right: 40px;
-	background-color: #c0d6e4;
-	border-color: #d8d8d8;
-	border-width: 3px;
-	border-style: solid;
-	border-radius: 35px;
-	width: 350px;
+
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: 1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 50%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+
+
 }
 
 .divCentro1 {
@@ -71,26 +89,27 @@ body {
 	border: outset;
 	margin: 20px auto 40px auto;
 	height: 500px;
-	width: 800px;
+	width: 780px;
 	overflow: hidden;
 	position: relative;
 	color: white;
-	text-align: center;
+	text-align: left;
 	padding: 20px;
+  
 }
 
 .divCentro2 {
 	background-color: rgba(0, 0, 0, 0.8);;
 	font-size: 14px;
 	border: outset;
-	margin: 20px auto 40px auto;
-	height: 350px;
-	width: 800px;
+	margin: 20px auto 100px auto;
+	height: 430px;
+	width: 780px;
 	overflow: hidden;
 	position: relative;
 	color: white;
 	text-align: center;
-	padding: 20px;
+	padding: 40px;
 }
 
 
@@ -127,7 +146,7 @@ body {
 
 
 
-<div class="form-group">
+<div class="form-group" >
   <label class="col-md-4 control-label" for="email">Email</label>  
   <div class="col-md-5">
   <input id="email" name="emailEmpleado" type="text" style="height:30px; width: 700px;" placeholder="email@esi.uclm.es" class="form-control input-md" value ="${emailEmpleado}" required>
@@ -136,10 +155,10 @@ body {
 </div>
 
 
-<div class="form-group">
+<div class="form-group" align="center">
   <label class="col-md-4 control-label" for="enviar"></label>
   <div class="col-md-4">
-     <button type="submit" onClick="modificar()"  style="width: 700px;" class="btn boton-personalizado">Editar</button>
+     <button type="submit" onClick="modificar()"   style="width: 320px;"  class="btn boton-personalizadodivarriba">Editar</button>
   </div>
 </div>
 
@@ -152,7 +171,6 @@ body {
 
 	<h2 align="center">Modificacion de rol del empleado</h2>
 	<p align="center">
-		<b>*Promocione o deniegue al empleado </b>
 	</p>
 	<input name="idEmpleado" id="dni" value="" style="display: none">
 	<input name="mensaje" id="mens" value="" style="display: none">

@@ -1,6 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,11 +20,117 @@
 </head>
 
 <style>
-.body {
+.body1 {
+  /* Aquí el origen de la imagen */
+	background-image;
+	/* Fijar la imagen de fondo este vertical y
+    horizontalmente y centrado */
+	background-position: center center;
+	/* Esta imagen no debe de repetirse */
+	background-repeat: no-repeat;
+	/* COn esta regla fijamos la imagen en la pantalla. */
+	background-attachment: fixed;
+	/* La imagen ocupa el 100% y se reescala */
+	background-size: cover;
+	/* Damos un color de fondo mientras la imagen está cargando  */
+	background-color: #464646;
+
+}
+body {
+	/* Aquí el origen de la imagen */
+	background-color:
+	#F7F8E0;
+	/* Fijar la imagen de fondo este vertical y
+    horizontalmente y centrado */
+	background-position: center center;
+	/* Esta imagen no debe de repetirse */
+	background-repeat: no-repeat;
+	/* COn esta regla fijamos la imagen en la pantalla. */
+	background-attachment: fixed;
+	/* La imagen ocupa el 100% y se reescala */
+	background-size: cover;
+	/* Damos un color de fondo mientras la imagen está cargando  */
+	background-color: #F7F8E0;
+}
+
+
+
+
+.wrapper {
+	width: 100%;
+	height: auto;
+	padding: 0;
 	margin: 0;
-	color: #6a6f8c;
-	background: #c8c8c8;
-	font: 600 16px/18px 'Open Sans', sans-serif;
+	overflow: hidden;
+	min-height: 100px;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	color: #fff;
+	background: #343a40;
+	line-height: 80px;
+	position: relative;
+	top: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+#logo {
+	font-family: ubuntu;
+	font-size: 40px;
+	float: left;
+}
+
+.nav {
+	float: right;
+	font-family: ubuntu;
+}
+
+.nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	margin: 0 15px;
+}
+
+.nav a:hover {
+	color: red;
+}
+
+.header.stivky {
+	background: rgba(211, 84, 0, 0.9);
+	height: 50px;
+	line-height: 50px;
+	box-shadow: 0px 2px 10px #000;
+}
+
+.header .stivky #logo {
+	font-size: 22px;
+}
+
+#scrollToTop {
+	font-size: 3em;
+	color: #446cB3;
+	position: fixed;
+	right: 40px;
+	bottom: 10%;
+	transition: all 0.5s ease;
+}
+
+#scrollToTop:hover {
+	transform: scale(1.1, 1.1);
+	color: rgba(211, 84, 0, 0.9);
+}
+
+.hide {
+	transition: all 0.5s ease;
+	transform: scale(0, 0);
 }
 
 *, :after, :before {
@@ -42,7 +148,7 @@
 }
 
 .a {
-	color: inherit;
+	color: #fffff;
 	text-decoration: none
 }
 
@@ -50,11 +156,8 @@
 	width: 100%;
 	margin: auto;
 	max-width: 525px;
-	min-height: 670px;
+	min-height: 600px;
 	position: relative;
-	background:
-		url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
-		no-repeat center;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0
 		rgba(0, 0, 0, .19);
 }
@@ -64,7 +167,7 @@
 	height: 100%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
-	background: rgba(40, 57, 101, .9);
+	background: #343a40;
 }
 
 .login-html .sign-in, .login-html .sign-up, .login-form .group .check {
@@ -112,7 +215,7 @@
 	border: none;
 	padding: 15px 20px;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, .1);
+	background-color: #D8D8D8;
 }
 
 .login-form .group input[data-type="password"] {
@@ -156,7 +259,7 @@
 }
 
 .login-form .group label .icon:after {
-	top: 6px;
+	top: px;
 	right: 0;
 	transform: scale(0) rotate(0);
 }
@@ -180,98 +283,6 @@
 }
 
 
-
-
-<!--HEADER -->
-
-@import
-	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
-	;
-
-html, body {
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-}
-
-.wrapper {
-	width: 100%;
-	height: auto;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-	min-height: 100px;
-}
-
-header {
-	width: 100%;
-	height: 80px;
-	color: #fff;
-	background: #1161ee;
-	line-height: 80px;
-	position: relative;
-	top: 0;
-	transition: all 0.5s ease;
-	box-shadow: 0px 2px 10px #fff inset;
-}
-
-.container {
-	width: 100%;
-	max-width: 1024px;
-	margin: 0 auto;
-}
-
-#logo {
-	font-family: ubuntu;
-	font-size: 40px;
-	float: left;
-}
-
-nav {
-	float: right;
-	font-family: ubuntu;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-	margin: 0 15px;
-}
-
-nav a:hover {
-	color: red;
-}
-
-header.stivky {
-	background: rgba(211, 84, 0, 0.9);
-	height: 50px;
-	line-height: 50px;
-	box-shadow: 0px 2px 10px #000;
-}
-
-header .stivky #logo {
-	font-size: 22px;
-}
-
-#scrollToTop {
-	font-size: 3em;
-	color: #446cB3;
-	position: fixed;
-	right: 40px;
-	bottom: 10%;
-	transition: all 0.5s ease;
-}
-
-#scrollToTop:hover {
-	transform: scale(1.1, 1.1);
-	color: rgba(211, 84, 0, 0.9);
-}
-
-.hide {
-	transition: all 0.5s ease;
-	transform: scale(0, 0);
-}
 </style>
 
 
@@ -282,7 +293,7 @@ header .stivky #logo {
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<div id="logo">Avengers Live</div>
+					<div id="logo">In Time</div>
 
 				</div>
 			</header>
@@ -302,11 +313,15 @@ header .stivky #logo {
 				<form action="enviarPeticionContrasena.htm" method="post" class="login-form">
 					<div class="sign-in-htm">
 						<div class="group">
+            <br/> <br/>
 							<label for="user" class="label">Introduzca EMAIL o DNI</label> 
+               <br/>
 							<input id="user" type="text" name="inputEmail" class="input" required autofocus>
 						</div>
 
 						<div class="group">
+             <br/>
+              <br/>
 							<input type="submit" class="button" name="enviarPeticion" value="Recuperar contraseña">
 						</div>				 
 					</div>

@@ -38,31 +38,10 @@ public class loginController {
 
 	@RequestMapping("login.htm")
 	public ModelAndView redireccion() {
-		ModelAndView MV = new ModelAndView();
-		MV.setViewName("login");
-		return MV;
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("login");
+		return mv;
 	}
-
-	// @RequestMapping(value = "atras.htm", method = RequestMethod.POST)
-	// public ModelAndView atras(HttpServletRequest request, ModelMap model) throws
-	// Exception {
-	// String estado = null;
-	// List<Document> listaFichajes = new ArrayList<Document>();
-	// Document fich = null;
-	// if(!listaFichajes.isEmpty()) {
-	// for (int i=0; i<listaFichajes.size(); i++) {
-	// fich = listaFichajes.get(listaFichajes.size()-1);
-	// }
-	// estado = fich.get("estado").toString();
-	// }
-	// model.addAttribute("email", empleado.getEmail());
-	// model.addAttribute("estado", estado);
-	// if (empleado.getRol().equals("usuario"))
-	// return new ModelAndView("home");
-	// else if(empleado.getRol().equals("gestor"))return new
-	// ModelAndView("gestor");//unica línea añadida
-	// else return new ModelAndView("admin");
-	// }
 
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
@@ -73,7 +52,9 @@ public class loginController {
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
 		List<Document> listaFichajes = new ArrayList<Document>();
+		
 		System.out.println(contrasena);
+		
 		if (empleado.credencialesCorrectas(email, contrasena)) {
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
@@ -474,9 +455,6 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.POST, value = "eliminarEmpleado.htm")
 	public ModelAndView eliminarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String email = request.getParameter("emailEmpleado");
-		String nombre = request.getParameter("nombre");
-		String dni = request.getParameter("dni");
-		String rol = request.getParameter("rol");
 		empleado.eliminarEmpleado(email);
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
 		listaEmpleados = empleado.consultarEmpleados();
@@ -547,13 +525,13 @@ public class loginController {
 
 		System.out.println("hola");
 
-		String mail = request.getParameter("emailEmpleado");
+		String modmail = request.getParameter("emailEmpleado");
 		String nombree = request.getParameter("nombre");
 		System.out.println(nombree);
 
 		Empleado empl = new Empleado();
 		String[] tipos = { "email", "nombre" };
-		String[] valores = { mail, nombree };
+		String[] valores = { modmail, nombree };
 		empl.modificarEmpleado(tipos, valores, dni);
 
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();

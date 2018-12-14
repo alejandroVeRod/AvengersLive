@@ -11,7 +11,47 @@
  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 
+<style>
+html, body {
+  /* Aquí el origen de la imagen */
+	/* Fijar la imagen de fondo este vertical y
+    horizontalmente y centrado */
+	background-position: center center;
+	/* Esta imagen no debe de repetirse */
+	background-repeat: no-repeat;
+	/* COn esta regla fijamos la imagen en la pantalla. */
+	background-attachment: fixed;
+	/* La imagen ocupa el 100% y se reescala */
+	background-size: cover;
+	/* Damos un color de fondo mientras la imagen está cargando  */
+	background-color: #F7F8E0;
+}
+{
+  .boton {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
 
+}
+
+.boton:hover {
+	cursor: pointer;
+}
+
+}
+
+}
+
+</style>
 
 <body class="bg-light">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -99,7 +139,7 @@
           <div class="control-group">
             <label class="control-label">Estado</label>
             <div class="controls">
-              <div class="row-fluid">
+              <div class="row-fluid" >
                 <select name ="estado" class="input-block-level">
                  
                     <option>Abierto</option>
@@ -110,6 +150,7 @@
           </div>
        
           <div class="form-actions">
+          
             <button type="submit" onClick="modificar()" class="btn btn-primary">Almacenar</button>
             
           
@@ -119,7 +160,7 @@
         </fieldset>
         
         <input type="text" name="idEmpleado" style="display: none" value= "${dni}" class="form-control">
-					 <input type="text" name="emailEmpleado" style="display:none"   value= "${emailEmpleado}"  class="form-control" >
+  				 <input type="text" name="emailEmpleado" style="display:none"   value= "${emailEmpleado}"  class="form-control" >
 					 <input
 					type="text" name="idEmpleado" style="display: none" value= "${dni}" class="form-control">
 					 <input type="text" name="emailEmpleado" style="display:none"   value= "${emailEmpleado}"  class="form-control" >
@@ -136,9 +177,16 @@
 				
 				
 &nbsp;&nbsp;
-				<button class="btn  btn-primary "
-					type="submit">Atras</button>
+				<button class="btn  btn-primary  "
+				
+        
+        type="submit">Atras</button>
 					
+        <style>
+          
+          
+
+        </style>
 			</form>
 </body>
 

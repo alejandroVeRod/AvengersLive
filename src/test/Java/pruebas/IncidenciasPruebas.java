@@ -43,7 +43,8 @@ public void testCambiarMensaje() {
 public void testNoCambiarMensaje() {
 	Incidencia in =new Incidencia();
 	boolean resultado=in.cambiarMensaje("717207848P", "C", "Dias libres");
-	assertTrue(!resultado);
+	assertFalse(resultado);
 }
+
 
 }

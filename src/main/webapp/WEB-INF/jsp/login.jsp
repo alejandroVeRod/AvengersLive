@@ -4,11 +4,11 @@
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js">
-	
+  
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-	
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  
 </script>
 <link rel="stylesheet"
 	href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -47,8 +47,7 @@
 <style>
 .body1 {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+	background-image;
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -64,8 +63,8 @@
 }
 body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+	background-color:
+	#F7F8E0;
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -76,7 +75,7 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 }
 
 
@@ -95,12 +94,10 @@ header {
 	width: 100%;
 	height: 80px;
 	color: #fff;
-	background: #1161ee;
+	background: #343a40;
 	line-height: 80px;
 	position: relative;
 	top: 0;
-	transition: all 0.5s ease;
-	box-shadow: 0px 2px 10px #fff inset;
 }
 
 .container {
@@ -161,16 +158,6 @@ header {
 	transform: scale(0, 0);
 }
 
-
-
-
-
-
-
-
-
-
-
 *, :after, :before {
 	box-sizing: border-box
 }
@@ -186,7 +173,7 @@ header {
 }
 
 .a {
-	color: inherit;
+	color: #fffff;
 	text-decoration: none
 }
 
@@ -196,9 +183,6 @@ header {
 	max-width: 525px;
 	min-height: 670px;
 	position: relative;
-	background:
-		url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
-		no-repeat center;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0
 		rgba(0, 0, 0, .19);
 }
@@ -208,7 +192,7 @@ header {
 	height: 100%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
-	background: rgba(40, 57, 101, .9);
+	background: #343a40;
 }
 
 .login-html .sign-in, .login-html .sign-up, .login-form .group .check {
@@ -256,7 +240,8 @@ header {
 	border: none;
 	padding: 15px 20px;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, .1);
+	background: #D8D8D8;
+
 }
 
 .login-form .group input[data-type="password"] {
@@ -336,7 +321,7 @@ header {
 		<div class="wrapper">
 			<header>
 				<div class="container">
-					<div id="logo">Avengers Live</div>
+					<div id="logo">In Time</div>
 
 				</div>
 			</header>
@@ -352,15 +337,15 @@ header {
 				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label
 					for="tab-1" class="tab">LOGIN</label>
 
-				<form action="home.htm" method="post" class="login-form">
+				<form action="home.htm" method="post" class="login-form" autocomplete="off">
 					<div class="sign-in-htm">
 						<div class="group">
 							<label for="user" class="label">Email</label> <input name="inputEmail"
 								type="text" class="input" required autofocus>
 						</div>
 						<div class="group">
-							<label for="pass" class="label">Password</label> <input name="inputPassword"
-								type="password" class="input" data-type="password" required autofocus>
+							<label for="pass" class="label" autocomplete="off">Password</label> <input name="inputPassword"
+								type="password"  class="input" data-type="password" required autofocus>
 						</div>
 
 						<div class="group">
@@ -372,9 +357,9 @@ header {
 						<div class="hr"></div>
 						
 					</div>
-<div>
-				<ul>
-					<li>Estado : <c:out value=" ${error}" /></li>
+      <div>
+				<ul style="color:#FF0000";>
+					<c:out value=" ${error}" />
 				</ul>
 			</div>
 				</form>

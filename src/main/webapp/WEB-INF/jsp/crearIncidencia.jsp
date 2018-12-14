@@ -4,14 +4,14 @@
 <html>
 <head>
 <title>Crear incidencia</title>
-<script src=" https://code.jquery.com/jquery.js">	
+<script src=" https://code.jquery.com/jquery.js">  
 </script>
 <script
-	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
-	
+  src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  
 </script>
 <link rel="stylesheet"
-	href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <meta http-equiv="content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/estilos.css">
 
@@ -79,8 +79,7 @@
 <style>
 body {
 	/* Aquí el origen de la imagen */
-	background-image:
-		url(https://i2.wp.com/plagi.es/wp-content/uploads/2016/01/FONDO-Web-2016-OK-1.jpg);
+
 	/* Fijar la imagen de fondo este vertical y
     horizontalmente y centrado */
 	background-position: center center;
@@ -91,7 +90,7 @@ body {
 	/* La imagen ocupa el 100% y se reescala */
 	background-size: cover;
 	/* Damos un color de fondo mientras la imagen está cargando  */
-	background-color: #464646;
+	background-color: #F7F8E0;
 	font-family: helvetica;
 }
 	
@@ -133,18 +132,25 @@ body {
 	min-height: 100px;
 	max-height: 200px;
 	max-width: 100%;
+  background-color:#D8D8D8
 }
 
 .boton {
-	width: 100%;
-	background: #31384A;
-	color: #fff;
-	padding: 20px;
-	font-size: 17px;
-}
-
-.boton:hover {
-	cursor: pointer;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+	background-color: #1161ee;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	border-radius: 5px;
+	width: 25%;
+	border: 2px solid #08088A;
+	border-width: 1px 1px 3px;
+	box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	margin-bottom: 10px;
+  margin-top:20px;
+  position: relative;
+  
 }
 
 @media ( max-width :480px) {
@@ -154,7 +160,7 @@ body {
 }
 
 .caja {
-	margin: 20px auto 40px auto;
+	margin: 20px auto 0px auto;
 	border: 1px solid #d9d9d9;
 	height: 30px;
 	overflow: hidden;
@@ -165,9 +171,9 @@ body {
 .select {
 	background: white;
 	border: outset;
-	font-size: 14px;
-	height: 30px;
-	padding: 5px;
+	font-size: 15px;
+	height: 50px;
+	padding-bottom: 20px;
 	width: 250px;
 }
 
@@ -182,7 +188,6 @@ body {
 	text-align: center;
 	width: 30px;
 	height: 30px;
-	background-color: #31384A;
 	position: absolute;
 	top: 0;
 	right: 0px;
@@ -190,10 +195,10 @@ body {
 }
 
 .fechas {
-	background-color: #31384A;
+	background-color: #343a40;
 	font-size: 14px;
 	border: outset;
-	margin: 20px auto 40px auto;
+	margin: 0px auto 0px auto;
 	height: 200px;
 	width: 500px;
 	overflow: hidden;
@@ -241,7 +246,7 @@ body {
 			<textarea class="textarea" name="comentario"
 				placeholder="Observaciones" required></textarea>
 
-			<input type="submit" class="boton boton:hover" value="ENVIAR"
+			<input type="submit" class="boton" value="ENVIAR"
 				name="botonEnviar">
 
 		</form>	

@@ -1,11 +1,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=utf-8"
-	import="com.avengers.proyecto.loginController"%>
+  import="com.avengers.proyecto.loginController"%>
 <!DOCTYPE html>
 <html>
 <head>
 <script src=" https://code.jquery.com/jquery.js ">
-	
+  
 </script>
 <script
 	src=" https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
@@ -24,7 +24,7 @@
 .body {
 	margin: 0;
 	color: #6a6f8c;
-	background: #c8c8c8;
+	background: #F7F8E0;
 }
 
 *, :after, :before {
@@ -52,8 +52,6 @@
 	max-width: 525px;
 	min-height: 670px;
 	position: relative;
-	background:
-		url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
 		no-repeat center;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0
 		rgba(0, 0, 0, .19);
@@ -61,10 +59,10 @@
 
 .login-html {
 	width: 100%;
-	height: 100%;
+	height: 110%;
 	position: absolute;
 	padding: 90px 70px 50px 70px;
-	background: rgba(40, 57, 101, .9);
+	background: #343a40;
 }
 
 .login-html .sign-in, .login-html .sign-up, .login-form .group .check {
@@ -112,7 +110,7 @@
 	border: none;
 	padding: 15px 20px;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, .1);
+	background: #D8D8D8;
 }
 
 .login-form .group input[data-type="password"] {
@@ -182,7 +180,7 @@
 
 <body>
 <br></br>
-	<div style="background: #1161ee; background-color: transparent">
+  <div style="background: #1161ee; background-color: transparent">
 		<p></p>
 
 		<!-- LOGIN -->
@@ -192,31 +190,32 @@
 					for="tab-1" class="tab">Cambio de contraseña</label>
 
 				<p align="left" >
-				<li type="disc" align="center" style="color:white">Introduzca la contraseña actual</li>
-				<li type="disc" align="center" style="color:white">Introduzca la nueva contraseña.
-					Esta debe contener al menos 8 caracteres con una mayúscula, una
-					minúscula y un número</li>
-				<li type="disc" align="center" style="color:white">Vuelva a introducir la nueva
-					contraseña</li>
-
-
 
 				</p>
 
-				<form action="cambiarContrasena.htm" method="post"
+				<form action="cambiarContrasena.htm" method="post" autocomplete="off"
 					class="login-form">
 					<div class="sign-in-htm">
 						<div class="group">
-
-							<input type="password" class="input" name="inputContrasena"
+  			<li type="disc" align="center" style="color:white">Introduzca la contraseña actual</li>
+              <br>
+							<input type="password" class="input" name="inputContrasena" autocomplete="off"
 								placeholder="Contraseña actual" required autofocus> 
 								<br>
-								<input
-								type="password" class="input" name="inputContrasenaNueva1"
+                <li type="disc" align="center" style="color:white">Introduzca la nueva contraseña.
+				      	Esta debe contener al menos 8 caracteres con una mayúscula, una
+					      minúscula y un número</li>
+								<br>
+                <input
+								type="password" class="input" name="inputContrasenaNueva1" autocomplete="off"
 								placeholder="Nueva contraseña" required> 
 								<br>
+                    
+      			<li type="disc" align="center" style="color:white">Vuelva a introducir la nueva
+    					contraseña</li>
+              <br>
 								<input
-								type="password" class="input" name="inputContrasenaNueva2"
+								type="password" class="input" name="inputContrasenaNueva2" autocomplete="off"
 								placeholder="Repetir nueva contraseña" required>
 						</div>
 	<br>
@@ -226,12 +225,17 @@
 						</div>
 					</div>
 					<h4 align="center">
-						Estado:
-						<c:out value="${mensaje}" />
+			<br>
+        <ul style="color:#FF0000";>
+				  	<c:out value="${mensaje}" />
+				</ul>
+        
+				
 					</h4>
 				</form>
 				
 				<div class="foot-lnk">
+        <br>
 							<a href="IrHome.htm">Volver al inicio</a>
 				</div>
 			</div>
