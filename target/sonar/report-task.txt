@@ -3,5 +3,5 @@ projectKey=celeeste06UNI_AvengersLive
 serverUrl=https://sonarcloud.io
 serverVersion=7.5.0.20127
 dashboardUrl=https://sonarcloud.io/dashboard?id=celeeste06UNI_AvengersLive
-ceTaskId=AWesfuUGk8xMH8iueBPd
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWesfuUGk8xMH8iueBPd
+ceTaskId=AWesgjRSZPHwg_m5wkdZ
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWesgjRSZPHwg_m5wkdZ

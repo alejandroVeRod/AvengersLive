@@ -5,7 +5,6 @@ public class GeneradorContrasena {
 	final static String NUMEROS = "0123456789";	 
 	final static String MAYUSCULAS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	final static String MINUSCULAS = "abcdefghijklmnopqrstuvwxyz"; 
-	//public static String ESPECIALES = "ñÑ";
  
 	public static String getPinNumber() {
 		return getContrasenaAleatoria(NUMEROS, 4);
