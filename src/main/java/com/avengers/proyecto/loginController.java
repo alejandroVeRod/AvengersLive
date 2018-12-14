@@ -52,7 +52,9 @@ public class loginController {
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
 		List<Document> listaFichajes = new ArrayList<Document>();
+		
 		System.out.println(contrasena);
+		
 		if (empleado.credencialesCorrectas(email, contrasena)) {
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
@@ -526,13 +528,13 @@ public class loginController {
 
 		System.out.println("hola");
 
-		String mail = request.getParameter("emailEmpleado");
+		String modmail = request.getParameter("emailEmpleado");
 		String nombree = request.getParameter("nombre");
 		System.out.println(nombree);
 
 		Empleado empl = new Empleado();
 		String[] tipos = { "email", "nombre" };
-		String[] valores = { mail, nombree };
+		String[] valores = { modmail, nombree };
 		empl.modificarEmpleado(tipos, valores, dni);
 
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
