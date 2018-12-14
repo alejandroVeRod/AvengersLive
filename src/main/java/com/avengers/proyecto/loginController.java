@@ -44,7 +44,7 @@ public class loginController {
 	}
 
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
-	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
+	public ModelAndView login(HttpServletRequest request, ModelMap model){
 		String email = null;
 		String contrasena = null;
 		String estado = null;
