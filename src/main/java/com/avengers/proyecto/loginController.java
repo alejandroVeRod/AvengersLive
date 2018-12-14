@@ -38,9 +38,9 @@ public class loginController {
 
 	@RequestMapping("login.htm")
 	public ModelAndView redireccion() {
-		ModelAndView MV = new ModelAndView();
-		MV.setViewName("login");
-		return MV;
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("login");
+		return mv;
 	}
 
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
@@ -455,9 +455,6 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.POST, value = "eliminarEmpleado.htm")
 	public ModelAndView eliminarEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 		String email = request.getParameter("emailEmpleado");
-		String nombre = request.getParameter("nombre");
-		String dni = request.getParameter("dni");
-		String rol = request.getParameter("rol");
 		empleado.eliminarEmpleado(email);
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
 		listaEmpleados = empleado.consultarEmpleados();
