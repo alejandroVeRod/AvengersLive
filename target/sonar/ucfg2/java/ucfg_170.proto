@@ -1,0 +1,184 @@
+
+Qmodelo.mongodb.TokenUtil#computeSignature(Lorg/bson/Document;J)Ljava/lang/String;
+__unknown_file (userDetails"""6*è	
+1W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# #(Ø
+¨
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java#- #(H
+%18"4java.lang.StringBuilder#toString()Ljava/lang/String;*
+
+signatureBuilderã
+à
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java#- #(S
+%19"java.lang.String#getBytes()[B*
+
+%18¢
+ü
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# #(T
+%20"(java.security.MessageDigest#digest([B)[B*
+
+
+digest*
+
+%19€
+ÿ
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# #(U
+%21":org.springframework.security.crypto.codec.Hex#encode([B)[C*1"/
+-org.springframework.security.crypto.codec.Hex*
+
+%20tr
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# #(
+%22"java.lang.Stringì
+ê
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java#	 #(V
+%23"java.lang.String#<init>([C)V*
+
+%22*
+
+%21"b
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# #(W
+
+%22*◊
+2W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (,t
+r
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (,
+digest"__id*
+
+%15*
+1*À
+5W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (Á
+‰
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (,
+%15"Xjava.security.MessageDigest#getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;*"
+java.security.MessageDigest*
+MD5*
+2*¿
+6W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# (6zx
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java' (4
+%0"java.lang.StringBuilderç
+ä
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java# (6
+%1"!java.lang.StringBuilder#<init>()V*
+
+%0}
+{
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (7
+signatureBuilder"__id*
+
+%0ª
+∏
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (2
+%2";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+userDetails*	
+emailÕ
+ 
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (3
+%3"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*
+
+signatureBuilder*
+
+%2æ
+ª
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (?
+%4"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+%3*
+:∏
+µ
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (/
+%5";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+userDetails*
+ipÕ
+ 
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (0
+%6"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*
+
+signatureBuilder*
+
+%5æ
+ª
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (<
+%7"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+%6*
+:º
+π
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java ("
+%8":java.lang.StringBuilder#append(J)Ljava/lang/StringBuilder;*
+
+signatureBuilder*
+""æ
+ª
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (.
+%9"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+%8*
+:¡
+æ
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (7
+%10";org.bson.Document#get(Ljava/lang/Object;)Ljava/lang/Object;*
+
+userDetails*
+
+contrasenaœ
+Ã
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (8
+%11"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*
+
+signatureBuilder*
+
+%10¿
+Ω
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (D
+%12"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+%11*
+:ñ
+ì
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (-
+%13"__id*+*)
+modelo.mongodb.TokenUtil"
+	MAGIC_KEYœ
+Ã
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (.
+%14"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+signatureBuilder*
+
+%13s
+q
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java (
+digest"__id*
+""*
+5

@@ -12,17 +12,23 @@ import java.security.NoSuchAlgorithmException;
 public class TokenUtil {
  
 	public static final String MAGIC_KEY = "AvengersLive";
- 
+	
 	public static String createToken(Document e) {
-		long expires = System.currentTimeMillis() + 1000L * 60 * 60;
-		return e.get("email") + ":" + expires + ":" + computeSignature(e, expires);
+		return e.get("email") +  ":" + computeSignature(e);
 	}
+	public static boolean saveToken(String Token) {
+		if(DAOEmpleado.saveToken(Token)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
  
-	public static String computeSignature(Document userDetails, long expires) {
+	public static String computeSignature(Document userDetails) {
 		StringBuilder signatureBuilder = new StringBuilder();
 		signatureBuilder.append(userDetails.get("email")).append(":");
 		signatureBuilder.append(userDetails.get("ip")).append(":");
-		signatureBuilder.append(expires).append(":");
 		signatureBuilder.append(userDetails.get("contrasena")).append(":");
 		signatureBuilder.append(TokenUtil.MAGIC_KEY);
  
@@ -42,12 +48,13 @@ public class TokenUtil {
 		String[] parts = authToken.split(":");
 		return parts[0];
 	}
+	
  
-	public static boolean validateToken(String authToken, Document userDetails) {
-		String[] parts = authToken.split(":");
-		long expires = Long.parseLong(parts[1]);
-		String signature = parts[2];
-		String signatureToMatch = computeSignature(userDetails, expires);
-		return expires >= System.currentTimeMillis() && signature.equals(signatureToMatch);
+	public static boolean validateToken(String authToken) {
+		if(DAOEmpleado.compareToken(authToken)) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

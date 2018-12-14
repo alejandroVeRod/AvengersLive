@@ -11,9 +11,9 @@ import com.mongodb.client.MongoCursor;
 
 public class DAOEmpleado {
 
-	private DBBroker db;
+	private static DBBroker db;
 	private MongoCollection<Document> coleccion;
-	private MongoCollection<Document> Tokens;
+	private static MongoCollection<Document> Tokens;
 	public DAOEmpleado() {
 		db = new DBBroker();
 		coleccion = db.devolverColeccion("Empleados");
@@ -22,8 +22,23 @@ public class DAOEmpleado {
 	/*
 	 * TOKEN
 	 */
-	public void saveToken(String Token) {
-		 db.insertarDocumento(Tokens,new Document().append("token", Token));
+	public static boolean saveToken(String Token) {
+		String email=Token.substring(0, Token.indexOf(":"));
+		if(db.insertToken(Tokens,Token,email ){
+			return true;
+		}else {
+			return false;
+		}
+		 
+	}
+	public static boolean compareToken(String authToken) {
+		String token=DBBroker.getToken(authToken);
+		if(token.equals(authToken)) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 	public String contrasenaDeEmpleado(String emailEmpleado) {
 		Document documentoEmail = null;

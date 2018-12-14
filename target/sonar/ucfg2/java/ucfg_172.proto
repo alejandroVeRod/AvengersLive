@@ -1,0 +1,82 @@
+
+Nmodelo.mongodb.TokenUtil#validateToken(Ljava/lang/String;Lorg/bson/Document;)Z
+__unknown_file (	authTokenuserDetails"3*¿
+1W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java3 3(U"a
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java3 3(U
+""*™
+2W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java32 3(;µ
+²
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java32 3(T
+%6",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+	signature*
+
+signatureToMatch*
+1*¾
+3W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java/ /(·
+´
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java/ /('
+%0"=java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;*
+
+	authToken*
+:r
+p
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java/ /((
+parts"__id*
+
+%0x
+v
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java0  0((
+%1"
+__arrayGet*	
+
+parts­
+ª
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java0 0()
+%2"-java.lang.Long#parseLong(Ljava/lang/String;)J*"
+java.lang.Long*
+
+%1x
+v
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java1 1(
+%3"
+__arrayGet*	
+
+partsv
+t
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java1 1(
+	signature"__id*
+
+%3ì
+é
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java2 2(B
+%4"Qmodelo.mongodb.TokenUtil#computeSignature(Lorg/bson/Document;J)Ljava/lang/String;*"
+modelo.mongodb.TokenUtil*
+
+userDetails*
+""}
+{
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java2 2(C
+signatureToMatch"__id*
+
+%4Ÿ
+œ
+W
+M/Users/alejandro/git/AvengersLive/src/main/java/modelo/mongodb/TokenUtil.java3 3(.
+%5"%java.lang.System#currentTimeMillis()J*"
+java.lang.System*
+2
+1

@@ -44,10 +44,10 @@ public class Empleado {
 		this.nombre = nombre;
 		this.rol = rol;
 	}
+	
 
-	public boolean credencialesCorrectas(String emailEmpleado, String contrasenaIntroducida) {
-		String contrasenaReal = dao.contrasenaDeEmpleado(emailEmpleado);
-		
+	public boolean credencialesCorrectas(String contrasenaIntroducida) {
+		String contrasenaReal = dao.contrasenaDeEmpleado(this.getEmail());
 		if(contrasenaReal.equals(contrasenaIntroducida)) {
 			
 			return true;   

@@ -1,7 +1,7 @@
 organization=alejandroverod-github
 projectKey=alejandroVeRod_AvengersLive
 serverUrl=https://sonarcloud.io
-serverVersion=7.5.0.19741
+serverVersion=7.5.0.20127
 dashboardUrl=https://sonarcloud.io/dashboard?id=alejandroVeRod_AvengersLive
-ceTaskId=AWeX0wXs9F5tYFz-WJp3
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeX0wXs9F5tYFz-WJp3
+ceTaskId=AWejzuGnehv-uB2o3FfY
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWejzuGnehv-uB2o3FfY

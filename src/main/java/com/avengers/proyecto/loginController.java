@@ -74,6 +74,9 @@ public class loginController {
 		empleado.sendToken(Token);
 		
 	}
+	public void compareToken(String Token) {
+		
+	}
 	@RequestMapping(value = "home.htm", method = RequestMethod.POST)
 	public ModelAndView login(HttpServletRequest request, ModelMap model) throws Exception {
 		
@@ -87,10 +90,14 @@ public class loginController {
 		emp.append("email", email);
 		emp.append("contrasena", contrasena);
 		emp.append("ip", request.getRemoteAddr());
-		request.getSession().setAttribute("token", TokenUtil.createToken(emp));
-
+		
+		
+		
 		List<Document> listaFichajes = new ArrayList<Document>();
-		if (empleado.credencialesCorrectas(email, contrasena)) {
+		if (empleado.credencialesCorrectas(contrasena) ) {
+			request.getSession().setAttribute("token", TokenUtil.createToken(emp));
+			TokenUtil.saveToken(request.getSession().getAttribute(token));
+			
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
 			if (!listaFichajes.isEmpty()) {
@@ -192,7 +199,10 @@ public class loginController {
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputContrasena"));
 		contrasenaNueva1 = request.getParameter("inputContrasenaNueva1");
 		contrasenaNueva2 = request.getParameter("inputContrasenaNueva2");
-		if (!empleado.credencialesCorrectas(email, contrasena))
+		/*
+		 * 
+		 */
+		if (!empleado.credencialesCorrectas(email))
 			mensaje = "Error al introducir tu contraseña actual";
 		else if (!empleado.requisitosContrasena(contrasenaNueva1))
 			mensaje = "La nueva contraseña introducida debe contener al menos una mayúscula, una minúscula "
