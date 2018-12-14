@@ -35,6 +35,8 @@ public class loginController {
 	String mail;
 	Incidencia inc;
 	String mensaje;
+	String e = "estado";
+	String ema = "email";
 
 	@RequestMapping("login.htm")
 	public ModelAndView redireccion() {
@@ -79,10 +81,10 @@ public class loginController {
 				for (int i = 0; i < listaFichajes.size(); i++) {
 					fich = listaFichajes.get(listaFichajes.size() - 1);
 				}
-				estado = fich.get("estado").toString();
+				estado = fich.get(e).toString();
 			}
-			model.addAttribute("email", empleado.getEmail());
-			model.addAttribute("estado", estado);
+			model.addAttribute(ema, empleado.getEmail());
+			model.addAttribute(e, estado);
 			boolean est = fichaje.fichajesAbiertos(empleado.getDni());
 			model.addAttribute("est", est);
 			mensaje = "Fichaje Cerrado";
@@ -126,9 +128,9 @@ public class loginController {
 
 		DateFormat hora = new SimpleDateFormat("HH:mm:ss");
 		DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy");
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		fichaje = new Fichaje(empleado.getDni(), fecha.format(new Date()), hora.format(new Date()));
-		model.addAttribute("estado", fichaje.getEstado());
+		model.addAttribute(e, fichaje.getEstado());
 		mensaje = "Fichaje Abierto";
 
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
@@ -149,7 +151,7 @@ public class loginController {
 		model.addAttribute("email", empleado.getEmail());
 		mensaje = "Fichaje Cerrado";
 		fichaje.cerrarFichaje(hora.format(new Date()), empleado);
-		model.addAttribute("estado", fichaje.getEstado());
+		model.addAttribute(e, fichaje.getEstado());
 		if (empleado.getRol().equals("usuario"))
 			return new ModelAndView("home", "mensaje", mensaje);
 		else if (empleado.getRol().equals("administrador")) {
@@ -216,7 +218,7 @@ public class loginController {
 		comentario = request.getParameter("comentario");
 		mensajeEstado = "En espera";
 
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 
 		if (!incidencia.incidenciaMismoTipo(idEmpleado, tipo, mensajeEstado))
 			mensaje = "Ya tienes una incidencia de este tipo creada en espera";
@@ -259,7 +261,7 @@ public class loginController {
 
 		model.addAttribute("id", id);
 		model.addAttribute("tip", tip);
-		model.addAttribute("email", email);
+		model.addAttribute(ema, email);
 		model.addAttribute("men", men);
 		model.addAttribute("fechaIn", fechaIn);
 		model.addAttribute("fechaFin", fechaFin);
@@ -296,7 +298,7 @@ public class loginController {
 	public ModelAndView darAltaEmpleado(HttpServletRequest request, HttpServletResponse response, ModelMap model)
 			throws Exception {
 		String id = request.getParameter("dni");
-		String email = request.getParameter("email");
+		String email = request.getParameter(ema);
 		String nombre = request.getParameter("nombre");
 		String rol = request.getParameter("rol");
 		Empleado altaEmpleado = new Empleado(id, email, nombre, rol);
@@ -364,7 +366,7 @@ public class loginController {
 	@RequestMapping(value = "IrHome.htm")
 	public ModelAndView IrHome(HttpServletRequest request, ModelMap model) throws Exception {
 
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		boolean est = fichaje.fichajesAbiertos(empleado.getDni());
 		model.addAttribute("est", est);
 		model.addAttribute("mensaje", mensaje);
@@ -398,7 +400,7 @@ public class loginController {
 		String fechaFich = request.getParameter("fechaFichaje");
 		String horaEntrada = request.getParameter("horaEntrada");
 		String horaCierre = request.getParameter("horaCierre");
-		String estad = request.getParameter("estado");
+		String estad = request.getParameter(e);
 
 		if (horaEntrada != "") {
 			model.addAttribute("horAh", horaEntrada.substring(0, 2));
@@ -413,7 +415,7 @@ public class loginController {
 		model.addAttribute("dia", fechaFich.substring(0, 2));
 		model.addAttribute("mes", fechaFich.substring(3, 5));
 		model.addAttribute("ano", fechaFich.substring(6, 10));
-		model.addAttribute("estado", estad);
+		model.addAttribute(e, estad);
 		if (email == null) {
 			System.out.println("hola");
 			fichaj = new Fichaje("", fechaFich, horaEntrada, horaCierre, estad);
@@ -433,7 +435,7 @@ public class loginController {
 		incidencia.resolver(id, fechaIn, fechaFin, comen);
 		model.addAttribute("id", id);
 		model.addAttribute("tip", tip);
-		model.addAttribute("email", email);
+		model.addAttribute(ema, email);
 		model.addAttribute("men", "resuelta");
 		model.addAttribute("fechaIn", fechaIn);
 		model.addAttribute("fechaFin", fechaFin);
@@ -457,7 +459,7 @@ public class loginController {
 			throws Exception {
 		model.addAttribute("id", inc.getIdEmpleado());
 		model.addAttribute("tip", inc.getTipo());
-		model.addAttribute("email", inc.getEmailEmpleado());
+		model.addAttribute(ema, inc.getEmailEmpleado());
 		model.addAttribute("men", inc.getMensaje());
 		model.addAttribute("fechaIn", inc.getFechaInicio());
 		model.addAttribute("fechaFin", inc.getFechaFin());
@@ -495,10 +497,10 @@ public class loginController {
 		model.addAttribute("est", est);
 
 		DateFormat hora1 = new SimpleDateFormat("HH:mm:ss");
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 
 		fichaje.cerrarFichaje(hora1.format(new Date()), empleado);
-		model.addAttribute("estado", fichaje.getEstado());
+		model.addAttribute(e, fichaje.getEstado());
 
 		Incidencia inc = new Incidencia();
 		inc.generarIncidenciaFichajeSinCerrar(empleado);
@@ -506,9 +508,9 @@ public class loginController {
 		String mensaje;
 		DateFormat hora = new SimpleDateFormat("HH:mm:ss");
 		DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy");
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		fichaje = new Fichaje(empleado.getDni(), fecha.format(new Date()), hora.format(new Date()));
-		model.addAttribute("estado", fichaje.getEstado());
+		model.addAttribute(e, fichaje.getEstado());
 		mensaje = "Fichaje Abierto";
 		model.addAttribute("mensaje", mensaje);
 		if (empleado.getRol().equals("Usuario"))
@@ -537,7 +539,7 @@ public class loginController {
 
 		if (mail != null && nombre != null) {
 			Empleado empl = new Empleado();
-			String[] tipos = { "email", "nombre" };
+			String[] tipos = { ema, "nombre" };
 			String[] valores = { mail, nombree };
 			empl.modificarEmpleado(tipos, valores, dni);
 
@@ -551,15 +553,12 @@ public class loginController {
 			throws Exception {
 
 		String dni = request.getParameter("dni");
-
-		System.out.println("hola");
-
 		String mail = request.getParameter("emailEmpleado");
 		String nombree = request.getParameter("nombre");
-		System.out.println(nombree);
+
 
 		Empleado empl = new Empleado();
-		String[] tipos = { "email", "nombre" };
+		String[] tipos = { ema, "nombre" };
 		String[] valores = { mail, nombree };
 		empl.modificarEmpleado(tipos, valores, dni);
 
@@ -586,8 +585,8 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.GET, value = "home.htm")
 	public ModelAndView home(HttpServletRequest request, ModelMap model) throws Exception {
 		String estado = null;
-		model.addAttribute("email", empleado.getEmail());
-		model.addAttribute("estado", estado);
+		model.addAttribute(ema, empleado.getEmail());
+		model.addAttribute(e, estado);
 		if (empleado.getRol().equals("usuario"))
 			return new ModelAndView("home");
 		else if (empleado.getRol().equals("gestor"))
@@ -601,7 +600,7 @@ public class loginController {
 	public ModelAndView consultaFichajes(HttpServletRequest request, HttpServletResponse response, ModelMap model)
 			throws Exception {
 		String idEmpleado = empleado.getDni();
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		List<Document> listaFichajes = new ArrayList<Document>();
 		listaFichajes = fichaje.fichajesEmpleado(idEmpleado);
 		model.addAttribute("fichajes", listaFichajes);
@@ -619,7 +618,7 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.GET, value = "incidenciasGestorUsuario.htm")
 	public ModelAndView consultarIncidencias(HttpServletRequest request, ModelMap model) throws Exception {
 		model.addAttribute("id", empleado.getDni());
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		List<Incidencia> listaIncidencias = new ArrayList<Incidencia>();
 		Incidencia auxIncidencia = new Incidencia();
 		listaIncidencias = auxIncidencia.incidenciasFiltradas(null, null, empleado.getRol(), empleado.getDni());
@@ -634,14 +633,14 @@ public class loginController {
 	@RequestMapping(method = RequestMethod.GET, value = "vistaCambiarContrasena.htm")
 	public ModelAndView recuperarPassword(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		model.addAttribute("id", empleado.getDni());
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		return new ModelAndView("contrasena");
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "recuperarContrasena.htm")
 	public ModelAndView passwordOlvidada(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		model.addAttribute("id", empleado.getDni());
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 
 		return new ModelAndView("recuperarContrasena");
 	}
@@ -650,7 +649,7 @@ public class loginController {
 	public ModelAndView gestionEmpleados(HttpServletRequest request, HttpServletResponse response, ModelMap model)
 			throws Exception {
 		model.addAttribute("id", empleado.getDni());
-		model.addAttribute("email", empleado.getEmail());
+		model.addAttribute(ema, empleado.getEmail());
 		List<Empleado> listaEmpleados = new ArrayList<Empleado>();
 		listaEmpleados = empleado.consultarEmpleados();
 		model.addAttribute("Empleados", listaEmpleados);
@@ -680,7 +679,7 @@ public class loginController {
 		String dia = request.getParameter("dia");
 		String mes = request.getParameter("mes");
 		String ano = request.getParameter("ano");
-		String estado = request.getParameter("estado");
+		String estado = request.getParameter(e);
 		if (horAs == "")
 			horAs = "00";
 		if (horCs == "")
@@ -696,7 +695,7 @@ public class loginController {
 		model.addAttribute("dia", dia);
 		model.addAttribute("mes", mes);
 		model.addAttribute("ano", ano);
-		model.addAttribute("estado", estado);
+		model.addAttribute(e, estado);
 		model.addAttribute("dni", dniEmpl);
 		model.addAttribute("emailEmpleado", mail);
 
@@ -717,7 +716,7 @@ public class loginController {
 
 		model.addAttribute("id", id);
 		model.addAttribute("tip", tip);
-		model.addAttribute("email", email);
+		model.addAttribute(ema, email);
 		model.addAttribute("men", men);
 		model.addAttribute("fechaIn", fechaIn);
 		model.addAttribute("fechaFin", fechaFin);

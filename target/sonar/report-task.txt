@@ -1,7 +1,7 @@
-organization=alejandroverod-github
-projectKey=alejandroVeRod_AvengersLive
+organization=celeeste06uni-github
+projectKey=celeeste06UNI_AvengersLive
 serverUrl=https://sonarcloud.io
-serverVersion=7.5.0.19741
-dashboardUrl=https://sonarcloud.io/dashboard?id=alejandroVeRod_AvengersLive
-ceTaskId=AWeXzPiC3bMjuFYSFJEx
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeXzPiC3bMjuFYSFJEx
+serverVersion=7.5.0.20127
+dashboardUrl=https://sonarcloud.io/dashboard?id=celeeste06UNI_AvengersLive
+ceTaskId=AWeiKq6ZYrnPSWGsIH2T
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWeiKq6ZYrnPSWGsIH2T
