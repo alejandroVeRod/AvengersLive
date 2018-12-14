@@ -20,10 +20,15 @@ public class HelloServlet extends HttpServlet{
             throws ServletException, IOException {
 
 		ServletOutputStream out = resp.getOutputStream();
+		
+		try {
+		     out.write("hello heroku".getBytes());  
+			 out.flush();
+		     out.close();
 
-	     out.write("hello heroku".getBytes());  
-		 out.flush();
-	     out.close();
+		}catch(UnknownHostException uhex) {
+			
+		}
 
 	}   
 }
