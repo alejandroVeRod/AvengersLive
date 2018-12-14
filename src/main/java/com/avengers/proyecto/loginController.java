@@ -48,7 +48,7 @@ public class loginController {
 		String email = null;
 		String contrasena = null;
 		String estado = null;
-		Document fich = null;
+		Document fich = new Document();
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
 		List<Document> listaFichajes = new ArrayList<Document>();
