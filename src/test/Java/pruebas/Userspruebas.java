@@ -96,7 +96,7 @@ public class Userspruebas {
 	
 	@Test
 
-	public void testContraseñasIguales() {
+	public void testContrasenasIguales() {
 		Empleado empl =new Empleado();
 		assertTrue(empl.contrasenaCoincide("11","11"));
 		
