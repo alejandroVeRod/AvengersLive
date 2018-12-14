@@ -51,10 +51,6 @@ public class loginController {
 		Document fich = new Document();
 		email = request.getParameter("inputEmail");
 		contrasena = DigestUtils.md5Hex(request.getParameter("inputPassword"));
-		List<Document> listaFichajes = new ArrayList<Document>();
-		
-		System.out.println(contrasena);
-		
 		if (empleado.credencialesCorrectas(email, contrasena)) {
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
