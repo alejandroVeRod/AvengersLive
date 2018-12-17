@@ -96,7 +96,7 @@ public class loginController {
 		List<Document> listaFichajes = new ArrayList<Document>();
 		if (empleado.credencialesCorrectas(contrasena) ) {
 			request.getSession().setAttribute("token", TokenUtil.createToken(emp));
-			TokenUtil.saveToken(request.getSession().getAttribute(token));
+			TokenUtil.saveToken((String) request.getSession().getAttribute(token));
 			
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());

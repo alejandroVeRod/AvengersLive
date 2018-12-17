@@ -5,9 +5,16 @@ import java.util.List;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.bson.Document;
+import org.bson.conversions.Bson;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
+
+import static com.mongodb.client.model.Filters.eq;
+import static com.mongodb.client.model.Filters.and;
+import static com.mongodb.client.model.Filters.or;
+import static com.mongodb.client.model.Updates.combine;
+import static com.mongodb.client.model.Updates.set;
 
 public class DAOEmpleado {
 
@@ -24,7 +31,7 @@ public class DAOEmpleado {
 	 */
 	public static boolean saveToken(String Token) {
 		String email=Token.substring(0, Token.indexOf(":"));
-		if(db.insertToken(Tokens,Token,email ){
+		if(DBBroker.insertToken(Tokens,Token,email)){
 			return true;
 		}else {
 			return false;

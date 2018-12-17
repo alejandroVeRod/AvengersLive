@@ -43,9 +43,19 @@ public class DBBroker {
 	public static boolean insertToken(MongoCollection<Document> coleccion,String Token, String email) {
 		Bson filtro=null;
 		filtro=eq("token",Token);
+		Document doc=new Document();
+		doc.append("token", Token);
 		String savedToken=(String) coleccion.find(filtro).iterator().next().get("token");
-//		String savedEmail=
-//		String emailToken=;
+		String authEmail=savedToken.substring(0, Token.indexOf(":"));
+		if(coleccion.find(filtro).iterator().hasNext()) {
+			coleccion.deleteOne(filtro);
+			coleccion.insertOne(doc);
+			return true;
+		}else {
+			coleccion.insertOne(doc);
+			return true;
+		}
+		
 	}
 	
 	public MongoCollection<Document> devolverColeccion(String nombreColeccion) {
