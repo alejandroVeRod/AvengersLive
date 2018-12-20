@@ -1,105 +1,105 @@
 
 Wmodelo.mongodb.Incidencia#generarIncidenciaFichajeSinCerrar(Lmodelo/mongodb/Empleado;)Z
-__unknown_file (empleado"1*±
-1V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaW* W(6|z
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaW W()
-%0"java.text.SimpleDateFormat±
-Æ
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaW W(7
+__unknown_file (empleado"1*·
+1X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaW* W(6~|
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaW W()
+%0"java.text.SimpleDateFormat≥
+∞
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaW W(7
 %1"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*
 
 %0*
 
-dd/MM/yyyyq
-o
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaW W(8
+dd/MM/yyyys
+q
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaW W(8
 fecha"__id*
 
-%0xv
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaX X(
-%2"modelo.mongodb.Fichajeã
-à
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaX X(!
+%0zx
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaX X(
+%2"modelo.mongodb.Fichajeç
+ä
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaX X(!
 %3" modelo.mongodb.Fichaje#<init>()V*
 
-%2s
-q
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaX X("	
+%2u
+s
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaX X("	
 fichaje"__id*
 
-%2|z
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaY Y(.
-%4"java.text.SimpleDateFormatØ
-¨
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaY Y(:
+%2~|
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaY Y(.
+%4"java.text.SimpleDateFormat±
+Æ
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaY Y(:
 %5"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*
 
 %4*
 
-HH:mm:ssv
-t
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javaY Y(;
+HH:mm:ssx
+v
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javaY Y(;
 
 horaCierre"__id*
 
-%4£
-†
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java\ \(
+%4•
+¢
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java\ \(
 %6"2modelo.mongodb.Empleado#getDni()Ljava/lang/String;*
 
 
-empleadopn
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java_ _(
-%7"java.util.DateÉ
-Ä
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java_ _(
+empleadorp
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java_ _(
+%7"java.util.DateÖ
+Ç
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java_ _(
 %8"java.util.Date#<init>()V*
 
-%7µ
-≤
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java_ _(
+%7∑
+¥
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java_ _(
 %9"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*	
 
 fecha*
 
-%7qo
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java` `(
-%10"java.util.DateÖ
-Ç
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java` `(
+%7sq
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java` `(
+%10"java.util.Dateá
+Ñ
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java` `(
 %11"java.util.Date#<init>()V*
 
-%10∑
-¥
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java` `(
+%10π
+∂
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java` `(
 %12"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*	
 
 fecha*
 
-%10|z
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java[ [((
-%13"modelo.mongodb.Incidenciaá
-Ñ
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java[ b(
+%10~|
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java[ [((
+%13"modelo.mongodb.Incidenciaâ
+Ü
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.java[ b(
 %14"èmodelo.mongodb.Incidencia#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*
 
 %13*
@@ -111,28 +111,28 @@ L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.java[
 %9*
 
 %12*;9
-7Se ha abierto un nuevo fichaje teniendo otro sin cerrarqo
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javac. c(2
-%15"java.util.DateÖ
-Ç
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javac* c(4
+7Se ha abierto un nuevo fichaje teniendo otro sin cerrarsq
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javac. c(2
+%15"java.util.Dateá
+Ñ
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javac* c(4
 %16"java.util.Date#<init>()V*
 
-%15º
-π
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javac c(5
+%15æ
+ª
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javac c(5
 %17"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*
 
 
 horaCierre*
 
-%15⁄
-◊
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javac c(@
+%15‹
+Ÿ
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javac c(@
 %18"Rmodelo.mongodb.Fichaje#cerrarFichaje(Ljava/lang/String;Lmodelo/mongodb/Empleado;)V*
 	
 fichaje*
@@ -140,7 +140,7 @@ L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javac
 %17*
 
 
-empleado"`
-V
-L/Users/celeste/git/AvengersLive/src/main/java/modelo/mongodb/Incidencia.javad d(
+empleado"b
+X
+NC:\Users\Enrique\git\AvengersLive\src\main\java\modelo\mongodb\Incidencia.javad d(
 ""
