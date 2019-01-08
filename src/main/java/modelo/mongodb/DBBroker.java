@@ -45,16 +45,17 @@ public class DBBroker {
 		filtro=eq("token",Token);
 		Document doc=new Document();
 		doc.append("token", Token);
-		String savedToken=(String) coleccion.find(filtro).iterator().next().get("token");
-		String authEmail=savedToken.substring(0, Token.indexOf(":"));
+//		String savedToken=(String) coleccion.find(filtro).iterator().next().get("token");
+//		String authEmail=savedToken.substring(0, Token.indexOf(":"));
 		if(coleccion.find(filtro).iterator().hasNext()) {
 			coleccion.deleteOne(filtro);
 			coleccion.insertOne(doc);
-			return true;
 		}else {
 			coleccion.insertOne(doc);
-			return true;
+
 		}
+		
+		return true;
 		
 	}
 	

@@ -46,8 +46,8 @@ public class Empleado {
 	}
 	
 
-	public boolean credencialesCorrectas(String contrasenaIntroducida) {
-		String contrasenaReal = dao.contrasenaDeEmpleado(this.getEmail());
+	public boolean credencialesCorrectas(String email,String contrasenaIntroducida) {
+		String contrasenaReal = dao.contrasenaDeEmpleado(email);
 		if(contrasenaReal.equals(contrasenaIntroducida)) {
 			
 			return true;   

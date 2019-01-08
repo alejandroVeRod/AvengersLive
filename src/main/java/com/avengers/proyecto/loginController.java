@@ -94,9 +94,9 @@ public class loginController {
 		
 		
 		List<Document> listaFichajes = new ArrayList<Document>();
-		if (empleado.credencialesCorrectas(contrasena) ) {
+		if (empleado.credencialesCorrectas(email,contrasena) ) {
 			request.getSession().setAttribute("token", TokenUtil.createToken(emp));
-			TokenUtil.saveToken((String) request.getSession().getAttribute(token));
+			TokenUtil.saveToken((String) request.getSession().getAttribute("token"));
 			
 			empleado = new Empleado(email, contrasena);
 			listaFichajes = fichaje.fichajesEmpleado(empleado.getDni());
@@ -202,7 +202,7 @@ public class loginController {
 		/*
 		 * 
 		 */
-		if (!empleado.credencialesCorrectas(email))
+		if (!empleado.credencialesCorrectas(email,contrasena))
 			mensaje = "Error al introducir tu contraseña actual";
 		else if (!empleado.requisitosContrasena(contrasenaNueva1))
 			mensaje = "La nueva contraseña introducida debe contener al menos una mayúscula, una minúscula "
